@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: 300;
+  src: local("GothamLight"),
+    url("./assets/fonts/Gotham/Gotham-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: 400;
+  src: local("Gotham-Medium"),
+    url("./assets/fonts/Gotham/Gotham-Medium.otf") format("opentype");
+}
+
+@theme {
+  --color-slate-850: oklch(22.84% 0.031 256.88);
+  --font-sans: "Gotham", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html,
+body {
+  @apply bg-slate-850;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color-scheme: dark;
+  }
+}
