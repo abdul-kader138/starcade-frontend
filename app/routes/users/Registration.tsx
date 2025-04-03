@@ -76,12 +76,10 @@ export default function Register() {
 
   return (
     <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
-      <Toaster position="top-right" reverseOrder={false} />
-
       <div className="bg-gray-800 rounded-lg shadow-xl p-8 w-full max-w-md">
         <div className="text-center mb-6">
           <img src="/logo.png" alt="Logo" className="mx-auto h-16 w-20" />
-          <h5 className="text-lg font-bold text-white mt-2">{Lang.sign_up}</h5>
+          <h5 className="text-lg font-bold text-white mt-2">{Lang.login}</h5>
         </div>
         <Toaster position="top-right" reverseOrder={false} />
         <form>

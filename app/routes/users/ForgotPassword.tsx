@@ -58,32 +58,33 @@ export default function ForgotPassword() {
     <div className="mx-4 my-8 py-4 text-white flex justify-center items-center">
       <Toaster position="top-right" />
       <form className="bg-gray-800 p-8 rounded-xl shadow-md w-full max-w-md">
-        <h2 className="text-lg text-center mb-2 pb-2 text-red-500 font-bold">
-          {Lang.forgot_password}
-        </h2>
+        <div className="text-center mb-2">
+          <img src="/logo.png" alt="Logo" className="mx-auto h-16 w-20" />
+          <h5 className="text-md font-bold text-white mt-2">{Lang.forgot_password}</h5>
+        </div>
         {error && (
           <p className="text-red-500 text-sm text-center mt-2">{error}</p>
         )}
         <input
           type="email"
           placeholder="Enter your email"
-          className="w-full p-3 rounded bg-gray-700 text-xs text-white mb-4 border border-gray-600 focus:border-red-500"
+          className="w-full mb-3 p-3 bg-gray-700 rounded text-sm focus:border-blue-500 text-white border border-gray-600 outline-none"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <button
-          type="button"
-          disabled={loading}
-          onClick={handleForgotPassword}
-          className="w-full bg-gradient-to-r from-red-500 to-orange-500 cursor-pointer flex justify-center items-center hover:bg-red-600 text-sm font-semibold py-2 rounded"
-        >
-          {loading ? (
-            <FaSpinner className="animate-spin mr-2 text-xl" />
-          ) : (
-            Lang.send_link
-          )}
-        </button>
+            type="button"
+            onClick={handleForgotPassword}
+            className="w-full py-3 text-sm bg-gray-600 hover:bg-gray-500 text-white font-semibold rounded cursor-pointer mb-3 flex items-center justify-center"
+            disabled={loading}
+          >
+            {loading ? (
+              <FaSpinner className="animate-spin text-xl" />
+            ) : (
+              Lang.continue
+            )}
+          </button>
       </form>
     </div>
   );

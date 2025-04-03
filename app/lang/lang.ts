@@ -53,7 +53,7 @@ const Lang = {
   logout: "Sign out",
   password: "Password",
   settings: "Settings",
-  send_link: "Send Reset Link",
+  continue: "Continue",
   desposit_withdraw: "Deposits and Withdrawals",
   tournamenst_rules: "Tournaments and Rules",
   ongoing_tournamenst: "On Going Tournaments",
