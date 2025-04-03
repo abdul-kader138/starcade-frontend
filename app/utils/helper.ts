@@ -3,7 +3,7 @@ import axios from "axios";
 export class Helper {
   // API Base URL (from environment variables)
   BASE_API = `${import.meta.env.VITE_API_BASE_URL}`;
-  BASE_WEBSOCKET = `${import.meta.env.VITE_WEBSOKET_BASE_URL}`;
+  BASE_WEBSOCKET = `${import.meta.env.VITE_WEBSOCKET_BASE_URL}`;
 
   // Axios instance with credentials enabled
   api = axios.create({

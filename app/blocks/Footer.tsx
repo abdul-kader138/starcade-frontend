@@ -16,35 +16,7 @@ export function Footer() {
   const { getCurrentYear,BASE_API } = new Helper();
   const [now, setNow] = useState<number | null>(null);
   const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false); 
 
-
-  const handleSubscribe = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch(`${BASE_API}/newsletter/subscribe`, {
-        method: 'POST',
-        credentials: "include",
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      const data = await response.json();
-      if (response.ok) {
-        toast.success(Lang.subscription_email_sent_message)
-        setEmail('');
-      } else {
-        toast.error(data.message || Lang.unknown_error);
-      }
-    } catch (error:any) {
-      toast.error(error.message || Lang.unknown_error);
-    } finally {
-      setLoading(false);
-     }
-  };
-  
 
   useEffect(() => {
     setNow(getCurrentYear());
@@ -52,7 +24,7 @@ export function Footer() {
   return (
     <>
     <Toaster position="top-right" reverseOrder={false} />
-      <div className="relative w-full bg-gray-800 text-white pt-20 pb-10 z-10">
+      <div className="relative w-full bg-gray-900 text-white pt-20 pb-10 z-10">
         {/* SVG Wave Top */}
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-0">
           <svg
@@ -73,27 +45,6 @@ export function Footer() {
         </div>
 
         {/* Content Area */}
-        <div className="relative z-10 max-w-4xl mx-auto mt-2 text-center px-6 py-4">
-          <h2 className="text-lg font-semibold mb-6">
-            {Lang.subscribe_newsletter}
-          </h2>
-          <div className="flex flex-col sm:px-2 sm:flex-row items-center justify-center gap-4">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              className="px-4 py-2.5 rounded-md w-full sm:w-96  bg-gray-700 text-white text-sm outline-none border border-gray-600 focus:border-red-500"
-            />
-             {loading ? (
-                <FaSpinner className="animate-spin mr-2 text-xl" />
-              ) : (
-                <button onClick={handleSubscribe} className="bg-gradient-to-r cursor-pointer from-red-500 to-orange-500 text-sm hover:bg-red-600 text-white px-3 py-2 rounded-sm font-semibold">
-                {Lang.subscribe_now}
-              </button>
-              )}
-          </div>
-        </div>
         <div className="px-15 py-5">
           <hr />
         </div>
@@ -102,7 +53,7 @@ export function Footer() {
           {/* About */}
           <div>
             <h3 className="text-white font-semibold mb-4 uppercase text-base">
-              {Lang.about_fx_rumble}
+              {Lang.about_starcade}
             </h3>
             <p className="text-gray-400 leading-relaxed text-sm">
               <span className="italic sm:px-2 sm:py-1">{Lang.title}</span>
@@ -121,12 +72,12 @@ export function Footer() {
             <ul className="text-gray-400 space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:underline">
-                  {Lang.about_me}
+                  {Lang.about_us}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:underline">
-                  {Lang.advertising}
+                  {Lang.blog}
                 </a>
               </li>
               <li>
@@ -150,7 +101,7 @@ export function Footer() {
             <ul className="text-gray-400 space-y-2 text-sm">
               <li className="flex items-start gap-2">
                 <FaPhone className="text-white mt-1" />
-                <span>{Lang.company_name}</span>
+                <span>{Lang.company_phone}</span>
               </li>
               <li className="flex items-start gap-2">
                 <FaEnvelope className="text-white mt-1" />
@@ -186,7 +137,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <footer className="text-white bg-gray-900 py-5 px-6 md:px-20">
+      <footer className="text-white bg-gray-950 py-5 px-6 md:px-20">
         <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-center">
           <div className="flex space-x-4 mt-2 md:mt-0 text-sm">
             &copy; {now} {Lang.title}. {Lang.copyright}.

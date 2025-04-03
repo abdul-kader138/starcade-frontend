@@ -77,7 +77,8 @@ const Lang = {
   about_me: "About me",
   about_us: "About us",
   useful_link: "USEFUL LINKS",
-  advertising: "Advertising",
+  blog: "Blog",
+  contact: "Contact",
   already_account: "Already have an account?",
   login: "Login",
   security_account_balance: "Security of Account Balances",
@@ -89,7 +90,7 @@ const Lang = {
   withdrwal: "Withdrawal",
   playing_tournament: "Playing Tournament",
   add_more: "Add More",
-  about_fx_rumble: "About Starcade",
+  about_starcade: "About Starcade",
   add_article: "Add Article",
   delete: "Delete",
   content: "Content",
@@ -127,8 +128,8 @@ const Lang = {
   password_update_success: "Password updated successfully!",
   article_created_success: "Article saved successfully!",
   image_upload_success: "image upload successfully!",
-  company_name: "UFGL UNION FINANCE GROUP LTD",
-  company_email: "info@fxrumble.com",
+  company_phone: "+880 654 321 233",
+  company_email: "contact@bugfinder.net",
   address: "ADDRESS",
   back_to_home: "Back To Home",
   tournament_types: "Tournament Types",
@@ -147,9 +148,9 @@ const Lang = {
   unknown_error: 'Something went wrong.Please contact with adminstrator',
   subscription_email_sent_message: 'Confirmation email sent. Please check your inbox.',
   mailing_address:
-    "Strovolos Avenue, 77 - Office 204 - Strovolos (Nicosia) Cyprus",
+    "457 Morningview, New York USA",
   subscribe_text:
-    "is a concept created by the Italian trader Marco Tosoni, who turns pro in 2009 and popular in Italy as the biggest Forex Contests winner in the country with performances up to 300% on a quarter base. Thanks to his experience on the financial market, Marco has created Starcade for whoever will to improve his trading skill and wish to earn money and knowledge in a funny and entertaining way.",
+    "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga",
 };
 
 export default Lang;

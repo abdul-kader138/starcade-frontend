@@ -37,7 +37,7 @@ Before running this project, make sure you have installed the following:
 2. Edit the `.env` file and update necessary configurations:
    ```env
    VITE_API_BASE_URL=URL_WHERE_YOUR_BACKEND_API_RUNNING
-   VITE_WEBSOKET_BASE_URL=URL_WHERE_YOUR_WEBSOCKET_RUNNING
+   VITE_WEBSOCKET_BASE_URL=URL_WHERE_YOUR_WEBSOCKET_RUNNING
    ```
 
 ### **5️⃣ Start the Development Server**

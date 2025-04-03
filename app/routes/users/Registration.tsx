@@ -75,15 +75,14 @@ export default function Register() {
   };
 
   return (
-    <div className="flex items-center justify-center mx-4 my-8 py-4 bg-gray-900">
-      <div className="w-full max-w-2xl bg-gray-800 rounded-lg shadow-lg overflow-hidden p-10">
-        {/* Registration Form Title */}
-        <h2 className="text-xl text-center text-red-500 font-bold mb-3">
-          {Lang.sign_up}
-        </h2>
-        {error && (
-          <p className="text-red-500 text-sm text-center mt-2">{error}</p>
-        )}
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
+      <Toaster position="top-right" reverseOrder={false} />
+
+      <div className="bg-gray-800 rounded-lg shadow-xl p-8 w-full max-w-md">
+        <div className="text-center mb-6">
+          <img src="/logo.png" alt="Logo" className="mx-auto h-16 w-20" />
+          <h5 className="text-lg font-bold text-white mt-2">{Lang.sign_up}</h5>
+        </div>
         <Toaster position="top-right" reverseOrder={false} />
         <form>
           {/* First Name */}
@@ -93,7 +92,7 @@ export default function Register() {
               placeholder={Lang.first_name}
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="w-full p-3 bg-gray-700 text-white text-sm rounded-lg outline-none border border-gray-600 focus:border-red-500"
+              className="w-full p-3 bg-gray-700 text-white text-sm rounded-lg outline-none border border-gray-600 focus:border-blue-500"
               required
             />
           </div>
@@ -105,7 +104,7 @@ export default function Register() {
               placeholder={Lang.last_name}
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className="w-full p-3 bg-gray-700 text-white text-sm rounded-lg outline-none border border-gray-600 focus:border-red-500"
+              className="w-full p-3 bg-gray-700 text-white text-sm rounded-lg outline-none border border-gray-600 focus:border-blue-500"
               required
             />
           </div>
@@ -117,7 +116,7 @@ export default function Register() {
               placeholder={Lang.email}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 bg-gray-700 text-white text-sm rounded-lg outline-none border border-gray-600 focus:border-red-500"
+              className="w-full p-3 bg-gray-700 text-white text-sm rounded-lg outline-none border border-gray-600 focus:border-blue-500"
               required
             />
           </div>
@@ -129,7 +128,7 @@ export default function Register() {
               placeholder={Lang.password}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-3 bg-gray-700 text-white text-sm rounded-lg outline-none border border-gray-600 focus:border-red-500"
+              className="w-full p-3 bg-gray-700 text-white text-sm rounded-lg outline-none border border-gray-600 focus:border-blue-500"
               required
             />
           </div>
@@ -138,21 +137,22 @@ export default function Register() {
           <button
             type="button"
             onClick={handleSubmit}
-            className="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:bg-red-600 text-white py-3 cursor-pointer rounded-lg font-bold text-sm flex justify-center items-center"
+            className="w-full py-3 text-sm bg-gray-600 hover:bg-gray-500 text-white font-semibold rounded cursor-pointer mb-3 flex items-center justify-center"
             disabled={loading}
           >
             {loading ? (
-              <FaSpinner className="animate-spin mr-2 text-xl" />
+              <FaSpinner className="animate-spin text-xl" />
             ) : (
               Lang.sign_up_image
             )}
           </button>
+          
         </form>
         {/* Already have an account? */}
         <div className="text-center mt-4">
           <p className="text-gray-500 text-sm">
             {Lang.already_account + " "}
-            <a href="/login" className="text-white hover:underline">
+            <a href="/login" className="text-blue-400 hover:underline">
               {Lang.login}
             </a>
           </p>

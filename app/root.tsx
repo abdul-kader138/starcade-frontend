@@ -23,9 +23,10 @@ function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-gray-900 text-white flex flex-col min-h-screen">
+      <body className="bg-gray-800 text-white flex flex-col min-h-screen">
         {/* Global Header */}
         <Header />
+        
 
         {/* Main Content (Dynamic Routes Load Here) */}
         <main>{children}</main>
