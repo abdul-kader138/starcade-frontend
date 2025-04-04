@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
     server: {
-      port: Number(env.VITE_PORT) || 4001, 
+      port: Number(process.env.VITE_PORT || env.VITE_PORT || 4001),
     },
   };
 });
