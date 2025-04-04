@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import { FaFacebook, FaGoogle, FaSpinner, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaGoogle, FaSpinner, FaTwitter } from "react-icons/fa";
 import type { Route } from "../+types/Home";
 import Lang from "../../lang/lang";
 import { Helper } from "../../utils/helper";
@@ -103,9 +103,11 @@ export default function Login() {
           </div>
 
           <div className="flex justify-center gap-2 mb-4">
-            <FaFacebook className="text-white text-lg m-1 cursor-pointer"  />
-            <FaGoogle className="text-white text-lg m-1 cursor-pointer"  />
-            <FaTwitter className="text-white text-lg m-1 cursor-pointer"  />
+            <FaFacebook title="Facebook" className="text-white text-lg m-1 cursor-pointer"  />
+            <FaGoogle title="Google" className="text-white text-lg m-1 cursor-pointer"  />
+            <a href={`${BASE_API}/auth/github`} title="Login with GitHub">
+              <FaGithub className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition" />
+            </a>
           </div>
 
           <div className="text-center text-sm text-gray-400">
