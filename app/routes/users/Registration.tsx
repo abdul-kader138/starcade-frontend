@@ -80,6 +80,9 @@ export default function Register() {
         <div className="text-center mb-6">
           <img src="/logo.png" alt="Logo" className="mx-auto h-16 w-20" />
           <h5 className="text-lg font-bold text-white mt-2">{Lang.login}</h5>
+          {error && (
+          <p className="text-red-500 text-sm text-center mt-2">{error}</p>
+        )}
         </div>
         <Toaster position="top-right" reverseOrder={false} />
         <form>
