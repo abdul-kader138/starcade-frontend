@@ -74,7 +74,7 @@ export default function ResetPassword() {
         )}
         <input
           type="password"
-          placeholder="Enter new password"
+          placeholder={Lang.new_password}
           className="w-full p-3 rounded bg-gray-700 text-sm mb-4 focus:border-blue-500 text-white border border-gray-600 outline-none"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -82,7 +82,7 @@ export default function ResetPassword() {
         />
         <input
           type="password"
-          placeholder="Confirm password"
+          placeholder={Lang.confirm_password}
           className="w-full p-3 rounded bg-gray-700 text-sm mb-4 focus:border-blue-500 text-white border border-gray-600 outline-none"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}

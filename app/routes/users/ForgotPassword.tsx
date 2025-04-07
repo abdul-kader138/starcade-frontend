@@ -67,7 +67,7 @@ export default function ForgotPassword() {
         )}
         <input
           type="email"
-          placeholder="Enter your email"
+          placeholder={Lang.enter_email}
           className="w-full mb-3 p-3 bg-gray-700 rounded text-sm focus:border-blue-500 text-white border border-gray-600 outline-none"
           value={email}
           onChange={(e) => setEmail(e.target.value)}

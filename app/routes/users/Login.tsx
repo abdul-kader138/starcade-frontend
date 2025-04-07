@@ -74,7 +74,7 @@ export default function Login() {
         <form onSubmit={handleSubmit}>
           <input
             type="email"
-            placeholder="Indirizzo e-mail"
+            placeholder={Lang.email_address}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full mb-3 p-3 bg-gray-700 rounded text-sm focus:border-blue-500 text-white border border-gray-600 outline-none"
@@ -82,7 +82,7 @@ export default function Login() {
 
           <input
             type="password"
-            placeholder="Password"
+            placeholder={Lang.password}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="w-full mb-3 p-3 bg-gray-700 rounded text-sm focus:border-blue-500 text-white border border-gray-600 outline-none"
