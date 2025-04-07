@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import { FaFacebook, FaGithub, FaGoogle, FaSpinner, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaGoogle, FaSpinner, FaSteam, FaTwitter } from "react-icons/fa";
 import type { Route } from "../+types/Home";
 import Lang from "../../lang/lang";
 import { Helper } from "../../utils/helper";
@@ -105,6 +105,9 @@ export default function Login() {
           <div className="flex justify-center gap-2 mb-4">
             <a href={`${BASE_API}/auth/facebook`} title="Login with GitHub">
             <FaFacebook title="Google" className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"  />
+            </a>
+            <a href={`${BASE_API}/auth/steam`} title="Login with GitHub">
+            <FaSteam title="Steam" className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"  />
             </a>
             <a href={`${BASE_API}/auth/google`} title="Login with GitHub">
             <FaGoogle title="Google" className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"  />
