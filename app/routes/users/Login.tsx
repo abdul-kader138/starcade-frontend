@@ -103,8 +103,12 @@ export default function Login() {
           </div>
 
           <div className="flex justify-center gap-2 mb-4">
-            <FaFacebook title="Facebook" className="text-white text-lg m-1 cursor-pointer"  />
-            <FaGoogle title="Google" className="text-white text-lg m-1 cursor-pointer"  />
+            <a href={`${BASE_API}/auth/facebook`} title="Login with GitHub">
+            <FaFacebook title="Google" className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"  />
+            </a>
+            <a href={`${BASE_API}/auth/google`} title="Login with GitHub">
+            <FaGoogle title="Google" className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"  />
+            </a>
             <a href={`${BASE_API}/auth/github`} title="Login with GitHub">
               <FaGithub className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition" />
             </a>
