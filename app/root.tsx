@@ -6,12 +6,11 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
 import type { Route } from "./+types/root";
-import "./app.css";
-import { Footer } from "./blocks/Footer";
-import { Header } from "./blocks/Header";
+import "./app.css"; // Ensure custom CSS is included here
 import { UserProvider } from "./provider/userContext";
+import { Header } from "./blocks/Header";
+import Slider from "./blocks/Slider";
 
 // 🔹 Global Layout
 function Layout({ children }: { children: React.ReactNode }) {
@@ -23,16 +22,13 @@ function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-gray-800 text-white flex flex-col min-h-screen">
+      <body className="bg-[#000f26] text-white flex flex-col min-h-screen overflow-x-hidden">
         {/* Global Header */}
         <Header />
-        
 
+        <Slider />
         {/* Main Content (Dynamic Routes Load Here) */}
-        <main>{children}</main>
-
-        {/* Global Footer */}
-        <Footer />
+        <main className="flex-grow p-4">{children}</main>
 
         <ScrollRestoration />
         <Scripts />

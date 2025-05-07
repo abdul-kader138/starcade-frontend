@@ -1,34 +1,67 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Gotham";
-  font-weight: 300;
-  src: local("GothamLight"),
-    url("./assets/fonts/Gotham/Gotham-Light.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Gotham";
-  font-weight: 400;
-  src: local("Gotham-Medium"),
-    url("./assets/fonts/Gotham/Gotham-Medium.otf") format("opentype");
-}
-
-@theme {
-  --color-slate-850: oklch(22.84% 0.031 256.88);
-  --font-sans: "Gotham", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'BW Modelica';
+  src: url('assets/fonts/bw/BwModelica-Medium.otf') format('otf'),
+       url('assets/fonts/bw/BwModelica-Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html,
 body {
-  @apply bg-slate-850;
+  /* Make the page cover the full viewport */
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #000F26; /* Background color as per the design */
+  color: white;
+  font-family: "BW Modelica", sans-serif;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+/* Make content inside the page flexibly scale with the viewport */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1; /* Allow content to grow to fill available space */
+  height: 100%;
+  padding: 20px; /* Adjust as needed */
+}
+
+/* Ensure content inside header, footer, and main sections stays aligned */
+header, footer, nav, .slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjust for spacing */
+}
+
+/* For large screens, make the header and footer elements spaced properly */
+@media screen and (min-width: 768px) {
+  header, footer,nav,.slider {
+    padding: 15px 30px 15PX 40PX;
   }
+}
 
-  @media (prefers-color-scheme: light) {
-    color-scheme: dark;
+/* Ensure the main body content is responsive */
+@media screen and (min-width: 1024px) {
+  main {
+    padding: 40px; /* More padding for larger screens */
+  }
+}
+
+/* Full screen height adjustment */
+@media (max-width: 768px) {
+  body {
+    height: 100%;
+  }
+}
+
+/* Apply for mobile and smaller screens */
+@media screen and (max-width: 480px) {
+  main {
+    padding: 10px; /* Smaller padding on mobile */
   }
 }

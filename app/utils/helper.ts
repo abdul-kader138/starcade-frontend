@@ -1,4 +1,5 @@
 import axios from "axios";
+import Lang from "~/lang/lang";
 
 export class Helper {
   // API Base URL (from environment variables)
@@ -10,6 +11,13 @@ export class Helper {
     baseURL: this.BASE_API,
     withCredentials: true,
   });
+
+   navigation = [
+    { name: Lang.games, href: "#", current: false,subItems: ["Submenu 1", "Submenu 2"] },
+    { name: Lang.about, href: "#", current: false ,subItems: ["Submenu 1"]},
+    { name: Lang.news, href: "#", current: false ,subItems: ["Submenu 1" ]},
+    { name: Lang.contact, href: "#", current: false,subItems: ["Submenu 1", "Submenu 2"] },
+  ];
 
   validateEmail = (email: string) => {
     if (!/\S+@\S+\.\S+/.test(email)) {

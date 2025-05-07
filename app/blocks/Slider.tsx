@@ -9,7 +9,7 @@ const slides = [
 
 export default function Slider() {
   const [current, setCurrent] = useState(0);
-  const slideInterval:any = useRef(null);
+  const slideInterval: any = useRef(null);
 
   const nextSlide = () =>
     setCurrent((current) => (current === slides.length - 1 ? 0 : current + 1));
@@ -23,13 +23,18 @@ export default function Slider() {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden bg-black">
-      <div className="flex transition-transform duration-700 ease-in-out"
-           style={{ transform: `translateX(-${current * 100}%)`, transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)" }}>
+    <div className="relative w-full overflow-hidden">
+      <div
+        className="flex mx-25 transition-transform duration-700 ease-in-out"
+        style={{
+          transform: `translateX(-${current * 100}%)`,
+          transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+        }}
+      >
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="min-w-full h-[570px] bg-cover bg-center relative scale-95 opacity-80 transition-transform duration-700"
+            className="min-w-full h-84 bg-cover bg-center relative scale-100 opacity-80 transition-transform duration-700"
             style={{
               backgroundImage: `url(${slide.image})`,
               transform: current === index ? "scale(1)" : "scale(0.9)",

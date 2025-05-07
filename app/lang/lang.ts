@@ -1,6 +1,20 @@
 // app scaffolding
 const Lang = {
   title: "Starcade",
+  search: "Search  ",
+  logo : "Logo",
+  install : "Install",
+  user : "User",
+  shoping_cart : "Shoping Cart",
+  open_main_menu:"Open main menu",
+  games:"Games",
+  about:"About",
+  news:"News",
+  contact:"Contact",
+
+
+
+
   profil: "Profile",
   school: "School",
   home: "Home",
@@ -74,6 +88,10 @@ const Lang = {
     "Name fields must be at least 2 characters long.",
   mailing_address:
     "457 Morningview, New York USA",
+
+
+
+
 };
 
 export default Lang;
