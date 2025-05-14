@@ -58,11 +58,27 @@ contact_us_content:" 🚀 Shaping worlds, one pixel at a time.",
 what_we_do:"What we do ?",
 what_we_do_details:" From concept to launch, we craft immersive experiences built for players who crave something different.",
 
+// news section
+commodore_industries: "Commodore Industries at Made in Italy Day: Innovation, Identity and Vision",
+commodore_industries_year: "April 11, 2025",
+commodore_industries_details: "Invited to tell their story, made of passion for technology, continuous research and strong roots in the values ​​of Italian identity ....",
+significant_progress: "Significant progress in the development of our first laptop powered by qualcomm snapdragon X elite",
+significant_progress_year: "November 15, 2024",
+significant_progress_details: "The initial testing phase has delivered highly encouraging results, demonstrated exceptional performance in both speed and energy efficiency ....",
+commodore_reviews: "Commodore Revives a Legend: Xenon Returns!",
+commodore_reviews_date: "September 28, 2024",
+commodore_reviews_details:"We are thrilled to announce that Commodore has acquired the license to work on a legendary title: Xenon! A cult game for all Amiga 500 owners, Xenon left an indelible mark in the ....",
+
+//questions
+question:"Question",
+faq:"Frequently Asked Questions",
+faq_content:" In this section, you'll find everything you need to know about STARCADE — from how to get started, to game support, purchases, and platform features. Whether you're a first-time player or a returning explorer, we're here to help you make the most of your STARCADE experience.",
+have_question:"Have questions? We’ve got answers.",
+
   profil: "Profile",
   school: "School",
   home: "Home",
   dashboard: "Dashboard",
-  faq: "FAQ",
   welcome_fx: "Welcome to Starcade",
   invalid_email_password: "Invalid email or password",
   welcome: "WELCOME",

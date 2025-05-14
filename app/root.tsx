@@ -11,12 +11,17 @@ import "./app.css"; // Ensure custom CSS is included here
 import { UserProvider } from "./provider/userContext";
 import { Header } from "./blocks/Header";
 import Slider from "./blocks/Slider";
-import GameSection from "./blocks/GameSection";
 import Commodorian from "./blocks/Commodorian";
 import ContactSection from "./blocks/ContactSection";
+import News from "./blocks/News";
+import Section from "./blocks/Section";
+import { Helper } from "./utils/helper";
+import Faq from "./blocks/Faq";
+import Footer from "./blocks/Footer";
 
 // 🔹 Global Layout
 function Layout({ children }: { children: React.ReactNode }) {
+  const { gameSections } = new Helper();
   return (
     <html lang="en">
       <head>
@@ -31,13 +36,21 @@ function Layout({ children }: { children: React.ReactNode }) {
 
         <Slider />
 
-        <GameSection />
+        <div className="text-white ml-14 mr-9 px-10 py-3 mt-12 mb-2">
+          <Section sections={gameSections} />
+        </div>
 
         <Commodorian />
 
         <ContactSection />
+
+        <News />
+        <Faq />
+
         {/* Main Content (Dynamic Routes Load Here) */}
         <main className="flex-grow p-4">{children}</main>
+
+        {/*  <Footer /> */}
 
         <ScrollRestoration />
         <Scripts />

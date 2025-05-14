@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'BW Modelica';
-  src: url('/assets/fonts/bw/BwModelica-Medium.otf') format('opentype'),
-       url('/assets/fonts/bw/BwModelica-Regular.otf') format('opentype');
+  src: url('/fonts/bw/BwModelica-Medium.otf') format('opentype'),
+       url('/fonts/bw/BwModelica-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -37,6 +37,20 @@ header, footer, nav, .slider {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px; /* Adjust for spacing */
+}
+
+.simplebar-scrollbar::before {
+  background-color: white !important;
+}
+
+.simplebar-track.simplebar-vertical {
+  background: transparent; /* Optional: scrollbar track */
+  width: 2px;
+}
+
+.simplebar-track.simplebar-horizontal {
+  background: transparent;
+  height: 2px;
 }
 
 @layer utilities {

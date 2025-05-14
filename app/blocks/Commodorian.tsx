@@ -7,13 +7,13 @@ export default function Commodorian() {
   const { commodorian } = new Helper();
 
   return (
-    <section className="text-white ml-14 mr-9 px-10 py-3">
-      <h2 className="text-3xl font-bold mb-2">{Lang.commodoriani}</h2>
-      <p className="text-sm text-gray-300 mb-6 max-w-md">
+    <section className="text-white ml-14 mr-9 px-10 py-3 mt-12 mb-2">
+      <h2 className="text-4xl font-bold mb-2">{Lang.commodoriani}</h2>
+      <p className="text-md font-bold text-gray-300 py-3 mb-6 max-w-md">
         {Lang.commodoriani_details}
       </p>
 
-      <div className="flex flex-wrap items-center gap-4 mb-4">
+      <div className="flex flex-wrap items-center gap-4 mb-4 py-3">
         <div className="flex border border-white rounded-full overflow-hidden">
           <button className="px-4 py-2 hover:bg-white hover:text-black transition">
             <ArrowLeftIcon className="w-5 h-5" />

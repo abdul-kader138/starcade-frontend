@@ -1,149 +1,71 @@
-import { useEffect, useState } from "react";
-import {
-  FaEnvelope,
-  FaEnvelopeOpen,
-  FaFacebookF,
-  FaLinkedinIn,
-  FaPhone,
-  FaSpinner,
-  FaTwitter,
-} from "react-icons/fa";
-import { Helper } from "~/utils/helper";
-import Lang from "../lang/lang";
-import toast, { Toaster } from "react-hot-toast";
+import { FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGamepad } from "react-icons/fa6";
 
-export function Footer() {
-  const { getCurrentYear,BASE_API } = new Helper();
-  const [now, setNow] = useState<number | null>(null);
-  const [email, setEmail] = useState("");
-
-
-  useEffect(() => {
-    setNow(getCurrentYear());
-  }, []);
+export default function Footer() {
   return (
-    <>
-    <Toaster position="top-right" reverseOrder={false} />
-      <div className="relative w-full bg-gray-900 text-white pt-20 pb-10 z-10">
-        {/* SVG Wave Top */}
-        <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-0">
-          <svg
-            className="relative block w-full h-[100px]"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 100"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,80 
-              C150,100 300,20 450,60 
-              C600,100 750,30 900,70 
-              C1050,110 1150,60 1200,40 
-              L1200,0 L0,0 Z"
-              fill="#111e2f"
+    <footer className="flex ml-12 mr-9 text-white border-t border-white/10 pt-12">
+      {/* TOP SECTION */}
+      <div className="w-full mx-auto px-6 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          {/* Join Section */}
+          <div className="col-span-2 space-y-4">
+            <h3 className="text-xl font-semibold">Join our community!</h3>
+            <input
+              type="email"
+              placeholder="*Email"
+              className="w-full px-4 py-2 rounded-md bg-transparent border border-white/40 placeholder-white/70 focus:outline-none focus:ring-1 focus:ring-white"
             />
-          </svg>
-        </div>
-
-        {/* Content Area */}
-        <div className="px-15 py-5">
-          <hr />
-        </div>
-
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
-          {/* About */}
-          <div>
-            <h3 className="text-white font-semibold mb-4 uppercase text-base">
-              {Lang.about_starcade}
-            </h3>
-            <p className="text-gray-400 leading-relaxed text-sm">
-              <span className="italic sm:px-2 sm:py-1">{Lang.title}</span>
-              {Lang.subscribe_text}
-              <span className="text-red-500 font-medium ml-1 cursor-pointer hover:underline">
-                {Lang.read_more}
-              </span>
-            </p>
+            <button className="w-full py-2 rounded-md bg-gray-300 text-black font-medium hover:bg-white transition">
+              SUBMIT
+            </button>
           </div>
 
-          {/* Useful Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-4 text-base">
-              {Lang.useful_link}
-            </h3>
-            <ul className="text-gray-400 space-y-2 text-sm">
-              <li>
-                <a href="#" className="hover:underline">
-                  {Lang.about_us}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  {Lang.blog}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  {Lang.help}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  {Lang.security_account_balance}
-                </a>
-              </li>
+          {/* Company */}
+          <div className="items-center space-y-2.5 justify-center px-10 mx-5">
+            <h4 className="font-bold">COMPANY</h4>
+            <ul className="text-sm text-white/80 space-y-1">
+              <li>About</li>
+              <li>Meet the team</li>
+              <li>News & Events</li>
+              <li>Services</li>
+              <li>Careers</li>
             </ul>
           </div>
 
-          {/* Address */}
-          <div>
-            <h3 className="text-white font-semibold mb-4 text-base">
-              {Lang.address}
-            </h3>
-            <ul className="text-gray-400 space-y-2 text-sm">
-              <li className="flex items-start gap-2">
-                <FaPhone className="text-white mt-1" />
-                <span>{Lang.company_phone}</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <FaEnvelope className="text-white mt-1" />
-                <span>{Lang.company_email}</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <FaEnvelopeOpen className="text-white mt-1" />
-                <span>{Lang.mailing_address}</span>
-              </li>
+          {/* Contact */}
+          <div className="items-center justify-center space-y-2.5 px-10 mx-5">
+            <h4 className="font-bold">CONTACT</h4>
+            <ul className="text-sm text-white/80 space-y-1">
+              <li>Via dei Luxardo, 33 - Rome, Italy</li>
+              <li>contact@starcade.com</li>
+              <li>Mon–Fri | 9.00AM – 5.00PM</li>
+              <li>Sat–Sun | Closed</li>
             </ul>
+          </div>
 
-            {/* Social Links */}
-            <div className="flex gap-3 mt-4">
-              <a
-                href="#"
-                className="p-2 bg-gray-600 rounded-full hover:bg-gray-700 transition"
-              >
-                <FaFacebookF />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-gray-600 rounded-full hover:bg-gray-700 transition"
-              >
-                <FaTwitter />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-gray-600 rounded-full hover:bg-gray-700 transition"
-              >
-                <FaLinkedinIn />
-              </a>
-            </div>
+          {/* Social Icons */}
+          <div className="flex flex-col items-end justify-end gap-4 pt-2 mr-5">
+            <FaYoutube className="w-6 h-6 hover:text-red-500 cursor-pointer" />
+            <FaGamepad className="w-6 h-6 hover:text-yellow-400 cursor-pointer" />
+            <FaInstagram className="w-6 h-6 hover:text-pink-400 cursor-pointer" />
+            <FaLinkedin className="w-6 h-6 hover:text-blue-400 cursor-pointer" />
           </div>
         </div>
       </div>
-      <footer className="text-white bg-gray-950 py-5 px-6 md:px-20">
-        <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-center">
-          <div className="flex space-x-4 mt-2 md:mt-0 text-sm">
-            &copy; {now} {Lang.title}. {Lang.copyright}.
-          </div>
+
+      {/*  <div className="w-full mx-auto flex flex-row items-center gap-3 text-center">
+        <span>COPYRIGHT © 2025 STARCADE _ ALL RIGHTS RESERVED</span>
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          <span>Terms of Service</span>
+          <span>Refund Policy</span>
+          <span>Privacy Policy</span>
+          <span>Cookie Preferences</span>
+          <span>End User License Agreement</span>
+          <span>Impressum / Company Info</span>
         </div>
-      </footer>
-    </>
+      </div> */}
+
+      {/* BOTTOM SECTION */}
+    </footer>
   );
 }

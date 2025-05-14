@@ -2,7 +2,7 @@ import Lang from "~/lang/lang";
 
 export default function ContactSection() {
   return (
-    <section className="text-white ml-14 mr-9 px-10 py-3">
+    <section className="text-white ml-14 mr-9 px-10 py-3 my-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Card 1: What We Do */}
         <div

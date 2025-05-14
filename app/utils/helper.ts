@@ -1,7 +1,7 @@
 import axios from "axios";
 import Lang from "~/lang/lang";
 
-interface GameSection {
+interface Section {
   id: number;
   title: string;
   date: string;
@@ -289,7 +289,7 @@ slidesVertical = [
   },
 ];
 
- gameSections:GameSection[] = [
+ gameSections:Section[] = [
   {
     id: 1,
     title: Lang.steel_saviour,
@@ -310,6 +310,30 @@ slidesVertical = [
     date: Lang.red_rum_year,
     description: Lang.red_rum_details,
     image: "/images/game-section/redrum.png",
+  },
+];
+
+ newsSection:Section[] = [
+  {
+    id: 1,
+    title: Lang.commodore_industries,
+    date: Lang.commodore_industries_year,
+    description: Lang.commodore_industries_details,
+    image: "/images/news-section/1.png",
+  },
+  {
+    id: 2,
+    title: Lang.significant_progress,
+    date: Lang.significant_progress_year,
+    description: Lang.significant_progress_details,
+    image: "/images/news-section/2.png",
+  },
+  {
+    id: 3,
+    title: Lang.commodore_reviews,
+    date: Lang.commodore_reviews_date,
+    description: Lang.commodore_industries_details,
+    image: "/images/news-section/3.png",
   },
 ];
 
@@ -346,6 +370,38 @@ slidesVertical = [
       image: "/images/commodorian/turrican.png",
     },
   ];
+
+  faqItems = [
+  {
+    id: 1,
+    question: "How do I report a bug or give feedback on a game?",
+    answer:
+      "You can report bugs or feedback through the support section of the game or by contacting our support team directly.",
+    color: "#EC2124",
+  },
+  {
+    id: 2,
+    question: "Can I access my game library on multiple devices?",
+    answer:
+      "Yes, you can access your STARCADE library from any supported device by logging in with your account.",
+    color: "#E5622F",
+  },
+  {
+    id: 3,
+    question: "Are STARCADE games available on other platforms?",
+    answer:
+      "Most STARCADE games are available on PC, mobile, and select consoles. Availability may vary.",
+    color: "#D4C52F",
+  },
+  {
+    id: 4,
+    question: "How do I download and install the game?",
+    answer:
+      "You can download and install games directly from your STARCADE dashboard after logging in.",
+    color: "#5CAC58",
+  },
+];
+
 
 
 }
