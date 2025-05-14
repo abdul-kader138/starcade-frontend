@@ -2,11 +2,12 @@
 
 @font-face {
   font-family: 'BW Modelica';
-  src: url('assets/fonts/bw/BwModelica-Medium.otf') format('otf'),
-       url('assets/fonts/bw/BwModelica-Regular.otf') format('otf');
+  src: url('/assets/fonts/bw/BwModelica-Medium.otf') format('opentype'),
+       url('/assets/fonts/bw/BwModelica-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+
 
 html,
 body {
@@ -17,7 +18,7 @@ body {
   padding: 0;
   background-color: #000F26; /* Background color as per the design */
   color: white;
-  font-family: "BW Modelica", sans-serif;
+  font-family: "BW Modelica", sans-serif !important;
 }
 
 /* Make content inside the page flexibly scale with the viewport */

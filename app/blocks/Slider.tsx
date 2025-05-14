@@ -34,16 +34,18 @@ export default function Slider() {
                 alt={slide.title}
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute top-4 left-6 z-10">
-                <span className="bg-[#FFFFFF33] text-white px-4 py-2.5 rounded-full text-[10px] sm:text-xs">
-                  {Lang.coming_soon}
-                </span>
-              </div>
+              {slide.upcoming && (
+                <div className="absolute top-4 left-6 z-10">
+                  <span className="bg-[#FFFFFF33] text-white px-4 py-2.5 rounded-full text-[10px] sm:text-xs">
+                    {Lang.coming_soon}
+                  </span>
+                </div>
+              )}
               <div className="absolute inset-0 z-10 bg-opacity-40 flex flex-col justify-end p-4 sm:p-6 space-y-2 sm:space-y-4">
                 <h3 className="text-xl sm:text-2xl font-bold px-0.5">
                   {slide.title}
                 </h3>
-                <h3 className="text-sm sm:text-xl leading-snug">
+                <h3 className="text-sm sm:text-xl leading-snug mb-2">
                   {slide.description
                     .split(" ")
                     .slice(
@@ -57,9 +59,11 @@ export default function Slider() {
                     .slice(Math.ceil(slide.description.split(" ").length / 2))
                     .join(" ")}
                 </h3>
-                <button className="w-fit px-4 mt-2 sm:px-6 py-1.5 sm:py-2 rounded-full border border-white text-white text-xs sm:text-sm font-medium bg-opacity-20 hover:bg-opacity-30 transition">
-                  {Lang.pre_order}
-                </button>
+                {slide.preOrder && (
+                  <button className="w-fit px-4 mt-2 sm:px-6 py-1.5 sm:py-2 rounded-full border border-white text-white text-xs sm:text-sm font-medium bg-opacity-20 hover:bg-opacity-30 transition">
+                    {Lang.pre_order}
+                  </button>
+                )}
               </div>
             </div>
           ))}
@@ -79,7 +83,7 @@ export default function Slider() {
               {idx === current && (
                 <div
                   key={current} // force re-run animation on index change
-                  className="absolute bottom-0 left-0 h-1 bg-white/70 z-10 animate-slide-progress"
+                  className="absolute bottom-0 left-0 h-full bg-white/50 z-10 animate-slide-progress"
                   style={{ width: "100%" }}
                 />
               )}
