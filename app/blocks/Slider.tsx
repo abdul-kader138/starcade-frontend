@@ -79,22 +79,23 @@ export default function Slider() {
               style={{ backgroundColor: item.bgcolor }}
               className="relative w-full max-w-full flex items-center gap-3 p-3 rounded-2xl text-white hover:scale-105 transition-transform overflow-hidden"
             >
-              {/* Progress animation only on current */}
               {idx === current && (
                 <div
-                  key={current} // force re-run animation on index change
-                  className="absolute bottom-0 left-0 h-full bg-white/50 z-10 animate-slide-progress"
-                  style={{ width: "100%" }}
+                  key={current}
+                  className="absolute inset-0 bg-white/30 animate-slide-progress z-0"
                 />
               )}
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-10 h-14 lg:h-16 lg:w-12 xl:h-18 xl:w-14 sm:w-12 sm:h-16 rounded"
-              />
-              <p className="text-xs sm:text-sm lg:text-md md:text-xs xl:text-md font-medium break-words w-full">
-                {item.title}
-              </p>
+
+              <div className="relative z-5 flex items-center gap-3 w-full">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-10 h-14 lg:h-16 lg:w-12 xl:h-18 xl:w-14 sm:w-12 sm:h-16 rounded"
+                />
+                <p className="text-xs sm:text-sm lg:text-md md:text-xs xl:text-md font-medium break-words w-full">
+                  {item.title}
+                </p>
+              </div>
             </div>
           ))}
       </div>
