@@ -9,13 +9,7 @@ export default function Slider() {
   const slideInterval = useRef<any>(null);
 
   const nextSlide = () =>
-    setCurrent((current) =>
-      current === slidesHorizental.length - 1 ? 0 : current + 1
-    );
-  const prevSlide = () =>
-    setCurrent((current) =>
-      current === 0 ? slidesHorizental.length - 1 : current - 1
-    );
+    setCurrent((prev) => (prev === slidesHorizental.length - 1 ? 0 : prev + 1));
 
   useEffect(() => {
     slideInterval.current = setInterval(nextSlide, 4000);
@@ -24,30 +18,27 @@ export default function Slider() {
 
   return (
     <div className="flex flex-col md:flex-row gap-1 mx-4 md:px-6 lg:px-16 py-0.5 md:h-[750px]">
-      {/*   <div className="flex flex-col md:flex-row gap-1 mx-4 md:px-6 lg:px-16 py-0.5"> */}
       {/* Horizontal Slider */}
       <div className="relative w-full mx-4 md:w-[83%] h-[300px] sm:h-[400px] md:h-full overflow-hidden rounded-3xl">
-        <div className="flex transition-transform duration-700 h-full">
+        <div
+          className="flex transition-transform duration-700 h-full"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
           {slidesHorizental.map((slide, index) => (
             <div
               key={index}
               className="min-w-full relative aspect-[16/9] md:aspect-[16/9] overflow-hidden rounded-3xl"
             >
-              {/* Image */}
               <img
                 src={slide.image}
                 alt={slide.title}
                 className="absolute inset-0 w-full h-full object-cover"
               />
-
-              {/* Top Tag - COMING SOON */}
               <div className="absolute top-4 left-6 z-10">
                 <span className="bg-[#FFFFFF33] text-white px-4 py-2.5 rounded-full text-[10px] sm:text-xs">
                   {Lang.coming_soon}
                 </span>
               </div>
-
-              {/* Content */}
               <div className="absolute inset-0 z-10 bg-opacity-40 flex flex-col justify-end p-4 sm:p-6 space-y-2 sm:space-y-4">
                 <h3 className="text-xl sm:text-2xl font-bold px-0.5">
                   {slide.title}
@@ -66,7 +57,6 @@ export default function Slider() {
                     .slice(Math.ceil(slide.description.split(" ").length / 2))
                     .join(" ")}
                 </h3>
-
                 <button className="w-fit px-4 mt-2 sm:px-6 py-1.5 sm:py-2 rounded-full border border-white text-white text-xs sm:text-sm font-medium bg-opacity-20 hover:bg-opacity-30 transition">
                   {Lang.pre_order}
                 </button>
@@ -83,8 +73,16 @@ export default function Slider() {
             <div
               key={idx}
               style={{ backgroundColor: item.bgcolor }}
-              className="w-full max-w-full flex items-center gap-3 p-3 rounded-2xl text-white hover:scale-105 transition-transform"
+              className="relative w-full max-w-full flex items-center gap-3 p-3 rounded-2xl text-white hover:scale-105 transition-transform overflow-hidden"
             >
+              {/* Progress animation only on current */}
+              {idx === current && (
+                <div
+                  key={current} // force re-run animation on index change
+                  className="absolute bottom-0 left-0 h-1 bg-white/70 z-10 animate-slide-progress"
+                  style={{ width: "100%" }}
+                />
+              )}
               <img
                 src={item.image}
                 alt={item.title}
@@ -96,6 +94,8 @@ export default function Slider() {
             </div>
           ))}
       </div>
+
+      {/* Tailwind-compatible animation */}
     </div>
   );
 }

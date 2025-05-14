@@ -38,6 +38,26 @@ header, footer, nav, .slider {
   padding: 10px 20px; /* Adjust for spacing */
 }
 
+@layer utilities {
+  @keyframes slide-progress {
+    from {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    to {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  .animate-slide-progress {
+    animation: slide-progress 4s linear forwards;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}
+
+
 /* For large screens, make the header and footer elements spaced properly */
 @media screen and (min-width: 768px) {
   header, footer,nav,.slider {

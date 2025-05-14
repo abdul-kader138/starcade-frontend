@@ -229,8 +229,8 @@ export class Helper {
     title: Lang.millennium_runners,
     description: Lang.millennium_runners_content,
   },
-  /* {
-    image: "/images/slider/slider2.webp",
+  {
+    image: "/images/slider/slider1.webp",
     title: "Coming Soon",
     description: "Discover the future of gaming...",
   },
@@ -238,7 +238,17 @@ export class Helper {
     image: "/images/slider/slider3.webp",
     title: "Explore Planets",
     description: "Speed through cities and planets...",
-  }, */
+  },
+  {
+    image: "/images/slider/slider2.webp",
+    title: "this is .....",
+    description: Lang.millennium_runners_content,
+  },
+  {
+    image: "/images/slider/slider1.webp",
+    title: "enjoy the season",
+    description: "Discover the future of gaming...",
+  },
 ];
 
 slidesVertical = [
