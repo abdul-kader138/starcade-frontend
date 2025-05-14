@@ -1,6 +1,14 @@
 import axios from "axios";
 import Lang from "~/lang/lang";
 
+interface GameSection {
+  id: number;
+  title: string;
+  date: string;
+  description: string;
+  image: string;
+}
+
 export class Helper {
   // API Base URL (from environment variables)
   BASE_API = `${import.meta.env.VITE_API_BASE_URL}`;
@@ -214,4 +222,110 @@ export class Helper {
     "🛠️ Customize controls for better gameplay",
     "💡 Study opponent strategies to improve",
   ];
+
+  slidesHorizental = [
+  {
+    image: "/images/slider/slider2.webp",
+    title: Lang.millennium_runners,
+    description: Lang.millennium_runners_content,
+  },
+  /* {
+    image: "/images/slider/slider2.webp",
+    title: "Coming Soon",
+    description: "Discover the future of gaming...",
+  },
+  {
+    image: "/images/slider/slider3.webp",
+    title: "Explore Planets",
+    description: "Speed through cities and planets...",
+  }, */
+];
+
+slidesVertical = [
+  {
+    title: Lang.participate_beta,
+    image: "/images/slider/beta-test.png",
+    bgcolor: "#E62928",
+  },
+  {
+    title: Lang.new_arrive,
+    image: "/images/slider/new-title.png",
+    bgcolor: "#E5632F",
+  },
+  {
+    title: Lang.countdown,
+    image: "/images/slider/countdown.png",
+    bgcolor: "#D4C52F",
+  },
+  {
+    title: Lang.community_discord,
+    image: "/images/slider/discord.png",
+    bgcolor: "#52A04D",
+  },
+  {
+    title: Lang.new_aggrement,
+    image: "/images/slider/update.png",
+    bgcolor: "#3B98BC",
+  },
+];
+
+ gameSections:GameSection[] = [
+  {
+    id: 1,
+    title: Lang.steel_saviour,
+    date: Lang.steel_saviour_date,
+    description: Lang.steel_saviour_details,
+    image: "/images/game-section/steel_savior.jpg",
+  },
+  {
+    id: 2,
+    title: Lang.eleven_years_ago,
+    date: Lang.eleven_years_ago_year,
+    description: Lang.eleven_years_ago_details,
+    image: "/images/game-section/eleven_years_ago.jpg",
+  },
+  {
+    id: 3,
+    title: Lang.red_rum,
+    date: Lang.red_rum_year,
+    description: Lang.red_rum_details,
+    image: "/images/game-section/redrum.png",
+  },
+];
+
+ commodorian = [
+    {
+      id: 16,
+      title: "Sid Meier’s CIVILIZATION",
+      image: "/images/commodorian/civilization.png",
+    },
+    {
+      id: 15,
+      title: "Robocop",
+      image: "/images/commodorian/xenon.png",
+    },
+    {
+      id: 14,
+      title: "XENON",
+      image: "/images/commodorian/robocop.png",
+    },
+    
+    {
+      id: 13,
+      title: "SANTORO",
+      image: "/images/commodorian/santoro.png",
+    },
+    {
+      id: 12,
+      title: "Indiana Jones",
+      image: "/images/commodorian/indiana.png",
+    },
+    {
+      id: 11,
+      title: "Turrican",
+      image: "/images/commodorian/turrican.png",
+    },
+  ];
+
+
 }

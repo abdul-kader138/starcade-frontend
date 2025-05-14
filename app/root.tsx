@@ -11,6 +11,9 @@ import "./app.css"; // Ensure custom CSS is included here
 import { UserProvider } from "./provider/userContext";
 import { Header } from "./blocks/Header";
 import Slider from "./blocks/Slider";
+import GameSection from "./blocks/GameSection";
+import Commodorian from "./blocks/Commodorian";
+import ContactSection from "./blocks/ContactSection";
 
 // 🔹 Global Layout
 function Layout({ children }: { children: React.ReactNode }) {
@@ -27,6 +30,12 @@ function Layout({ children }: { children: React.ReactNode }) {
         <Header />
 
         <Slider />
+
+        <GameSection />
+
+        <Commodorian />
+
+        <ContactSection />
         {/* Main Content (Dynamic Routes Load Here) */}
         <main className="flex-grow p-4">{children}</main>
 
