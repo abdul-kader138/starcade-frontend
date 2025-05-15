@@ -45,6 +45,7 @@ steel_saviour_details:"An old-school shooter set several years after a global wa
 commodoriani:"Commodoriani",
 commodoriani_details:" Interviews, news and reviews never read before, directly from the people who wrote the Commodore’s history!",
 see_all:"SEE ALL",
+see_less:"SEE LESS",
 
 
 // contact section

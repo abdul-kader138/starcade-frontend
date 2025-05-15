@@ -55,7 +55,7 @@ export default function FaqSection() {
                   activeId === item.id ? "max-h-96 mt-3" : "max-h-0"
                 }`}
               >
-                <p className="text-sm sm:text-base text-white">{item.answer}</p>
+                <p className="text-sm text-white">{item.answer}</p>
               </div>
             </div>
           ))}

@@ -335,6 +335,49 @@ slidesVertical = [
     description: Lang.commodore_industries_details,
     image: "/images/news-section/3.png",
   },
+  {
+    id: 4,
+    title: Lang.commodore_industries,
+    date: Lang.commodore_industries_year,
+    description: Lang.commodore_industries_details,
+    image: "/images/news-section/1.png",
+  },
+  {
+    id: 5,
+    title: Lang.significant_progress,
+    date: Lang.significant_progress_year,
+    description: Lang.significant_progress_details,
+    image: "/images/news-section/2.png",
+  },
+  {
+    id: 6,
+    title: Lang.commodore_reviews,
+    date: Lang.commodore_reviews_date,
+    description: Lang.commodore_industries_details,
+    image: "/images/news-section/3.png",
+  },
+  {
+    id: 7,
+    title: Lang.commodore_industries,
+    date: Lang.commodore_industries_year,
+    description: Lang.commodore_industries_details,
+    image: "/images/news-section/1.png",
+  },
+  {
+    id: 8,
+    title: Lang.significant_progress,
+    date: Lang.significant_progress_year,
+    description: Lang.significant_progress_details,
+    image: "/images/news-section/2.png",
+  },
+  {
+    id: 9,
+    title: Lang.commodore_reviews,
+    date: Lang.commodore_reviews_date,
+    description: Lang.commodore_industries_details,
+    image: "/images/news-section/3.png",
+  },
+  
 ];
 
  commodorian = [
@@ -346,12 +389,12 @@ slidesVertical = [
     {
       id: 15,
       title: "Robocop",
-      image: "/images/commodorian/xenon.png",
+      image: "/images/commodorian/robocop.png",
     },
     {
       id: 14,
       title: "XENON",
-      image: "/images/commodorian/robocop.png",
+      image: "/images/commodorian/xenon.png",
     },
     
     {
@@ -369,6 +412,72 @@ slidesVertical = [
       title: "Turrican",
       image: "/images/commodorian/turrican.png",
     },
+
+   {
+      id: 22,
+      title: "Sid Meier’s CIVILIZATION",
+      image: "/images/commodorian/civilization.png",
+    },
+    {
+      id: 21,
+      title: "Robocop",
+      image: "/images/commodorian/robocop.png",
+    },
+    {
+      id: 20,
+      title: "XENON",
+      image: "/images/commodorian/xenon.png",
+    },
+    
+    {
+      id: 19,
+      title: "SANTORO",
+      image: "/images/commodorian/santoro.png",
+    },
+    {
+      id: 18,
+      title: "Indiana Jones",
+      image: "/images/commodorian/indiana.png",
+    },
+    {
+      id: 17,
+      title: "Turrican",
+      image: "/images/commodorian/turrican.png",
+    },
+
+
+    {
+      id: 28,
+      title: "Sid Meier’s CIVILIZATION",
+      image: "/images/commodorian/civilization.png",
+    },
+    {
+      id: 27,
+      title: "Robocop",
+      image: "/images/commodorian/robocop.png",
+    },
+    {
+      id: 26,
+      title: "XENON",
+      image: "/images/commodorian/xenon.png",
+    },
+    
+    {
+      id: 25,
+      title: "SANTORO",
+      image: "/images/commodorian/santoro.png",
+    },
+    {
+      id: 24,
+      title: "Indiana Jones",
+      image: "/images/commodorian/indiana.png",
+    },
+    {
+      id: 23,
+      title: "Turrican",
+      image: "/images/commodorian/turrican.png",
+    },
+
   ];
 
   faqItems = [
