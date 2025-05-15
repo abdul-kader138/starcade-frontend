@@ -17,11 +17,11 @@ export default function Slider() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row gap-1 mx-4 md:px-6 lg:px-16 py-0.5 md:h-[750px]">
+    <div className="flex mx-8 flex-col gap-3 md:flex-row md:px-6 lg:px-16 py-0.5 md:h-[750px]">
       {/* Horizontal Slider */}
-      <div className="relative w-full mx-4 md:w-[83%] h-[300px] sm:h-[400px] md:h-full overflow-hidden rounded-3xl">
+      <div className="relative w-full md:w-[83%] h-[300px] sm:h-[400px] md:h-full overflow-hidden rounded-3xl">
         <div
-          className="flex transition-transform duration-700 h-full"
+          className="flex transition-transform duration-700 h-full rounded-3xl"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {slidesHorizental.map((slide, index) => (
@@ -71,13 +71,13 @@ export default function Slider() {
       </div>
 
       {/* Vertical Sidebar */}
-      <div className="w-full md:w-[17%] h-auto md:h-full flex flex-col justify-between gap-3 md:mt-0">
+      <div className="w-full md:w-[17%] h-auto md:h-full flex flex-col justify-between py-1 gap-3 md:mt-0">
         {slidesVertical &&
           slidesVertical.map((item, idx) => (
             <div
               key={idx}
               style={{ backgroundColor: item.bgcolor }}
-              className="relative w-full max-w-full flex items-center gap-3 p-3 rounded-2xl text-white hover:scale-105 transition-transform overflow-hidden"
+              className="relative w-full max-w-full flex items-center gap-3 p-2 rounded-2xl text-white hover:scale-105 transition-transform overflow-hidden"
             >
               {idx === current && (
                 <div
