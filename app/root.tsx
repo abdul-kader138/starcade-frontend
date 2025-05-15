@@ -50,7 +50,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         {/* Main Content (Dynamic Routes Load Here) */}
         <main className="flex-grow p-4">{children}</main>
 
-        {/*  <Footer /> */}
+        <Footer />
 
         <ScrollRestoration />
         <Scripts />

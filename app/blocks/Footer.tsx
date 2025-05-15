@@ -3,69 +3,122 @@ import { FaGamepad } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="flex ml-12 mr-9 text-white border-t border-white/10 pt-12">
-      {/* TOP SECTION */}
-      <div className="w-full mx-auto px-6 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {/* Join Section */}
-          <div className="col-span-2 space-y-4">
-            <h3 className="text-xl font-semibold">Join our community!</h3>
-            <input
-              type="email"
-              placeholder="*Email"
-              className="w-full px-4 py-2 rounded-md bg-transparent border border-white/40 placeholder-white/70 focus:outline-none focus:ring-1 focus:ring-white"
-            />
-            <button className="w-full py-2 rounded-md bg-gray-300 text-black font-medium hover:bg-white transition">
-              SUBMIT
-            </button>
-          </div>
+    <footer className="text-white flex flex-col gap-4 ml-14 mr-9 pt-12 pb-6">
+      {/* top Bar */}
+      <hr className="border-gray-600 w-full py-6" />
+      <div className="w-full mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Left: Newsletter */}
+        <div className="space-y-4">
+          <h3 className="text-3xl font-semibold">Join our community!</h3>
+          <input
+            type="email"
+            placeholder="*Email"
+            className="w-full px-4 py-2 rounded-md bg-transparent border border-white/40 placeholder-white/70 focus:outline-none focus:ring-1 focus:ring-white"
+          />
+          <button className="w-full py-2 bg-gray-300 text-black font-semibold rounded-md hover:bg-white transition">
+            SUBMIT
+          </button>
+        </div>
 
-          {/* Company */}
-          <div className="items-center space-y-2.5 justify-center px-10 mx-5">
-            <h4 className="font-bold">COMPANY</h4>
-            <ul className="text-sm text-white/80 space-y-1">
-              <li>About</li>
-              <li>Meet the team</li>
-              <li>News & Events</li>
-              <li>Services</li>
-              <li>Careers</li>
+        {/* Column: Company */}
+        <div className="flex flex-col items-center">
+          <div className="w-fit text-left space-y-6">
+            <h4 className="text-md font-bold uppercase">Company</h4>
+            <ul className="space-y-1 text-md text-white/80">
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Meet the team</a>
+              </li>
+              <li>
+                <a href="#">News & Events</a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+              <li>
+                <a href="#">Careers</a>
+              </li>
             </ul>
           </div>
+        </div>
 
-          {/* Contact */}
-          <div className="items-center justify-center space-y-2.5 px-10 mx-5">
-            <h4 className="font-bold">CONTACT</h4>
-            <ul className="text-sm text-white/80 space-y-1">
-              <li>Via dei Luxardo, 33 - Rome, Italy</li>
-              <li>contact@starcade.com</li>
-              <li>Mon–Fri | 9.00AM – 5.00PM</li>
-              <li>Sat–Sun | Closed</li>
-            </ul>
+        {/* Column: Contact */}
+        <div className="flex flex-col items-center ">
+          <div className="w-fit text-left space-y-3">
+            <h4 className="text-md font-bold uppercase">Contact</h4>
+            <p className="text-md text-white/80 leading-relaxed">
+              Via dei Luxardo, 33 – Rome, Italy <br />
+              - <br />
+              contact@starcade.com <br />
+              - <br />
+              Mon–Fri | 9.00AM – 5.00PM <br />
+              Sat–Sun | Closed
+            </p>
           </div>
+        </div>
 
-          {/* Social Icons */}
-          <div className="flex flex-col items-end justify-end gap-4 pt-2 mr-5">
-            <FaYoutube className="w-6 h-6 hover:text-red-500 cursor-pointer" />
-            <FaGamepad className="w-6 h-6 hover:text-yellow-400 cursor-pointer" />
-            <FaInstagram className="w-6 h-6 hover:text-pink-400 cursor-pointer" />
-            <FaLinkedin className="w-6 h-6 hover:text-blue-400 cursor-pointer" />
-          </div>
+        {/* Column: Social Icons */}
+        <div className="flex flex-col items-start sm:items-center lg:items-end justify-start gap-4 mt-6 lg:mt-0">
+          <FaYoutube className="w-10 h-10 hover:text-red-500 transition" />
+          <FaGamepad className="w-10 h-10 hover:text-purple-400 transition" />
+          <FaInstagram className="w-10 h-10 hover:text-pink-500 transition" />
+          <FaLinkedin className="w-10 h-10 hover:text-blue-400 transition" />
         </div>
       </div>
 
-      {/*  <div className="w-full mx-auto flex flex-row items-center gap-3 text-center">
-        <span>COPYRIGHT © 2025 STARCADE _ ALL RIGHTS RESERVED</span>
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-          <span>Terms of Service</span>
-          <span>Refund Policy</span>
-          <span>Privacy Policy</span>
-          <span>Cookie Preferences</span>
-          <span>End User License Agreement</span>
-          <span>Impressum / Company Info</span>
+      {/*   bottom bar */}
+      <hr className="border-gray-600 w-full py-6" />
+      <div className="w-full mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* copyright */}
+        <div className="space-y-4">
+          COPYRIGHT © 2025 STARCADE _ ALL RIGHTS RESERVED
         </div>
-      </div> */}
 
-      {/* BOTTOM SECTION */}
+        {/*terms and service */}
+        <div className="flex flex-col items-center">
+          <div className="w-fit text-left space-y-6">
+            <ul className="space-y-1 text-md text-white/80">
+              <li>
+                <a href="#">Terms of Service</a>
+              </li>
+              <li>
+                <a href="#">Refund Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Privacy Policy */}
+        <div className="flex flex-col items-center">
+          <div className="w-fit text-left space-y-6">
+            <ul className="space-y-1 text-md text-white/80">
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Cookie Preferences</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Column: Social Icons */}
+        <div className="flex flex-col items-end">
+          <div className="w-fit text-left space-y-6">
+            <ul className="space-y-1 text-md text-white/80">
+              <li>
+                <a href="#">End User License Agreement</a>
+              </li>
+              <li>
+                <a href="#">Impressum / Company Info</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/*   bottom bar */}
     </footer>
   );
 }
