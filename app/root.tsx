@@ -36,7 +36,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 
         <Slider />
 
-        <div className="text-white ml-14 mr-9 px-10 py-3 mt-12 mb-2">
+        <div className="text-white ml-14 mr-9 px-10 py-3 mt-6 mb-2">
           <Section sections={gameSections} />
         </div>
 
@@ -48,7 +48,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         <Faq />
 
         {/* Main Content (Dynamic Routes Load Here) */}
-        <main className="flex-grow p-4">{children}</main>
+        <main>{children}</main>
 
         <Footer />
 

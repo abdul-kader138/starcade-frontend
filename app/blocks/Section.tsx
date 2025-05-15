@@ -24,7 +24,7 @@ export default function GameSection({ sections }: SectionProps) {
               <img
                 src={game.image}
                 alt={game.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-2xl"
               />
               <div className="absolute top-2 right-2 bg-opacity-10 p-1 rounded-full">
                 <ArrowTopRightOnSquareIcon className="w-4 h-4 text-white" />
