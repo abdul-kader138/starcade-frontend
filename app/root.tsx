@@ -30,24 +30,10 @@ function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-[#000f26] text-white flex flex-col min-h-screen overflow-x-hidden">
+      <body className="bg-[#000f26] text-white flex flex-col box">
         {/* Global Header */}
         <Header />
 
-        <Slider />
-
-        <div className="text-white ml-14 mr-9 px-10 py-3 mt-6 mb-2">
-          <Section sections={gameSections} />
-        </div>
-
-        <Commodorian />
-
-        <ContactSection />
-
-        <News />
-        <Faq />
-
-        {/* Main Content (Dynamic Routes Load Here) */}
         <main>{children}</main>
 
         <Footer />

@@ -18,7 +18,7 @@ export default function Navbar() {
             {/* Input Field */}
             <input
               type="text"
-              className="text-white text-sm font-bold pl-12 pr-4 py-1 border border-stone-100 rounded-full w-38 h-10 bg-transparent"
+              className="text-white text-sm font-bold pl-12 pr-4 py-1  border-stone-100 rounded-full w-38 h-10 bg-transparent"
               onChange={(e) => {
                 const placeholder = document.getElementById("fake-placeholder");
                 if (placeholder) {

@@ -1,6 +1,12 @@
 import Slider from "~/blocks/Slider";
 import Lang from "../lang/lang";
 import type { Route } from "./+types/Home";
+import Section from "~/blocks/Section";
+import { Helper } from "~/utils/helper";
+import Commodorian from "~/blocks/Commodorian";
+import ContactSection from "~/blocks/ContactSection";
+import News from "~/blocks/News";
+import Faq from "~/blocks/Faq";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -10,5 +16,21 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <></>;
+  const { gameSections } = new Helper();
+  return (
+    <>
+      <Slider />
+
+      <div className="text-white ml-14 mr-9 px-10 py-3 mt-6 mb-2">
+        <Section sections={gameSections} />
+      </div>
+
+      <Commodorian />
+
+      <ContactSection />
+
+      <News />
+      <Faq />
+    </>
+  );
 }

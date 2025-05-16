@@ -17,9 +17,9 @@ export default function Slider() {
   }, []);
 
   return (
-    <div className="flex mx-8 flex-col gap-3 md:flex-row md:px-6 lg:px-16 py-0.5 md:h-[750px]">
+    <div className="flex mx-8 flex-col gap-3 md:flex-row md:px-6 lg:px-16 py-0.5 md:h-[500px]">
       {/* Horizontal Slider */}
-      <div className="relative w-full md:w-[83%] h-[300px] sm:h-[400px] md:h-full overflow-hidden rounded-3xl">
+      <div className="relative w-full md:w-[83%] h-[300px] sm:h-[400px] md:h-full overflow-hidden">
         <div
           className="flex transition-transform duration-700 h-full rounded-3xl"
           style={{ transform: `translateX(-${current * 100}%)` }}
