@@ -13,6 +13,7 @@ html,
 body {
   background-color: #000F26; /* Background color as per the design */
   color: white;
+  /*  overflow-x: hidden; */
   font-family: "BW Modelica", sans-serif !important;
 }
 

@@ -11,14 +11,17 @@ export default function Navbar() {
   };
   return (
     <nav className="w-full border-t border-white/10">
-      <div className="h-16 mx-8">
+      <div className="h-16 mx-1">
         {/* Desktop Menu */}
         <div className="hidden md:flex">
           {helper?.navigation.map((item: any, index: any) => (
-            <div className="relative mx-1" key={index}>
+            <div
+              className="relative mx-1 items-center justify-center"
+              key={index}
+            >
               <button
                 onClick={() => toggleDropdown(index)}
-                className="w-full text-white  py-2 mx-3.5 rounded-md hover:bg-[#2d3849] flex items-center"
+                className="w-full text-white px-2 items-center justify-center py-2 mx-3.5 rounded-md hover:bg-[#2d3849] flex items-center"
               >
                 <span className="px-2 text-sm">{item.name}</span>
                 <ChevronDownIcon
