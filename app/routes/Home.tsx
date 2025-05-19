@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <Slider />
 
-      <div className="text-white ml-14 mr-9 px-10 py-3 mt-6 mb-2">
+      <div className="text-white ml-4 mr-4 px-4 py-3 mt-6 mb-2 sm:ml-14 sm:mr-9 sm:px-5">
         <Section sections={gameSections} />
       </div>
 

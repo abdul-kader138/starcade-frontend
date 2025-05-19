@@ -1,17 +1,23 @@
 import { Helper } from "~/utils/helper";
 import { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  MagnifyingGlassIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+import Lang from "~/lang/lang";
 
 const helper = new Helper();
 export default function MobileNavMenu() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [showSearch, setShowSearch] = useState<boolean>(false);
 
   const toggleDropdown = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
     <>
-      <div className="w-full space-y-4 mt-6">
+      <div className="w-full space-y-4 mt-0">
         <div className="w-full space-y-2 mt-6">
           {helper.navigation.map((item, index) => (
             <div key={index} className="w-full">
@@ -41,6 +47,33 @@ export default function MobileNavMenu() {
               )}
             </div>
           ))}
+        </div>
+
+        {/* Search Input Section */}
+        <div className="px-4 mt-4">
+          {showSearch ? (
+            <div className="flex items-center space-x-2">
+              <input
+                type="text"
+                autoFocus
+                placeholder="Search..."
+                className="w-full bg-[#002459] text-white text-sm pl-4 pr-3 py-2 rounded-full border border-white focus:outline-none focus:ring-2 focus:ring-[#002459] transition"
+              />
+              <button
+                onClick={() => setShowSearch(false)}
+                className="text-white hover:text-gray-300 rounded-full hover:bg-white/10 transition p-1"
+              >
+                <XMarkIcon className="h-5 w-5" />
+              </button>
+            </div>
+          ) : (
+            <button
+              onClick={() => setShowSearch(true)}
+              className="text-white hover:text-gray-300 rounded-full hover:bg-white/10 transition p-1"
+            >
+              <MagnifyingGlassIcon className="h-6 w-6" />
+            </button>
+          )}
         </div>
       </div>
     </>

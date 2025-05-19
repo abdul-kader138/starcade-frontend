@@ -17,7 +17,7 @@ export default function Slider() {
   }, []);
 
   return (
-    <div className="flex mx-8 flex-col gap-3 md:flex-row md:px-6 lg:px-16 py-0.5 md:h-[500px]">
+    <div className="flex flex-col w-full gap-4 px-0 sm:px-2 md:flex-row md:px-8 lg:px-20 xl:px-20 py-0.5 md:h-[500px]">
       {/* Horizontal Slider */}
       <div className="relative w-full md:w-[83%] h-[300px] sm:h-[400px] md:h-full overflow-hidden">
         <div
@@ -71,7 +71,7 @@ export default function Slider() {
       </div>
 
       {/* Vertical Sidebar */}
-      <div className="w-full md:w-[17%] h-auto md:h-full flex flex-col justify-between py-1 gap-3 md:mt-0">
+      <div className="w-full md:w-[17%] h-auto md:h-full flex flex-col justify-between py-2 gap-3 md:mt-0">
         {slidesVertical &&
           slidesVertical.map((item, idx) => (
             <div

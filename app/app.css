@@ -20,7 +20,7 @@ body {
 .box {
   max-width: 1600px;
   margin: 0 auto;         
-  padding: 40px 20px;     
+  padding: 10px 15px;     
   border-radius: 8px;      
   /* optional rounded corners */
 }
@@ -30,7 +30,7 @@ header, footer, nav, .slider {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px; /* Adjust for spacing */
+  padding: 5px 10px; /* Adjust for spacing */
 }
 
 .simplebar-scrollbar::before {
