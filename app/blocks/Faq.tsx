@@ -15,7 +15,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="text-white ml-8 mr-2 my-16 px-4 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <section className="text-white lg:px-20 md:px-20 xs:px-0.5 sm:px-0.5 my-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
       {/* Left Side */}
       <div className="space-y-4">
         <h2 className="text-4xl font-bold leading-tight">{Lang.faq}</h2>

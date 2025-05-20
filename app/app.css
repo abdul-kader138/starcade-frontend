@@ -26,7 +26,7 @@ body {
 }
 
 /* Ensure content inside header, footer, and main sections stays aligned */
-header, footer, nav, .slider {
+header, nav, .slider {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,8 +69,8 @@ header, footer, nav, .slider {
 
 /* For large screens, make the header and footer elements spaced properly */
 @media screen and (min-width: 768px) {
-  header, footer,nav,.slider {
-    padding: 15px 30px 15PX 40PX;
+  header, nav,.slider {
+    padding: 15px 30px 15px 40px;
   }
 }
 
@@ -82,9 +82,3 @@ header, footer, nav, .slider {
   }
 }
 
-/* Apply for mobile and smaller screens */
-@media screen and (max-width: 480px) {
-  main {
-    padding: 10px; /* Smaller padding on mobile */
-  }
-}

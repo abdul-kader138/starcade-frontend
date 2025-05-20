@@ -24,7 +24,7 @@ export default function Navbar() {
       {/* Navigation Elements (Desktop only) */}
       <div className="hidden md:flex items-center gap-4 flex-grow justify-end">
         {/* Install Button */}
-        <button className="text-white bg-[#E62928] cursor-pointer text-sm font-bold rounded-full h-10 px-6 py-1.5 whitespace-nowrap flex items-center gap-2">
+        <button className="text-white bg-[#0b923f] cursor-pointer text-sm font-bold rounded-full h-10 px-6 py-1.5 whitespace-nowrap flex items-center gap-2">
           {Lang.install}
           <ArrowDownTrayIcon className="w-4 h-4" />
         </button>

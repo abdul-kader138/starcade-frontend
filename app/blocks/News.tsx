@@ -33,7 +33,7 @@ export default function News() {
   };
 
   return (
-    <section className="text-white ml-14 mr-9 px-10 py-3 mt-12 mb-2">
+    <section className="text-white lg:px-20 md:px-20 xs:px-0.5 sm:px-0.5 py-3 mt-12 mb-2">
       <h2 className="text-4xl font-bold mb-2">{Lang.news}</h2>
 
       {/* Navigation Buttons */}

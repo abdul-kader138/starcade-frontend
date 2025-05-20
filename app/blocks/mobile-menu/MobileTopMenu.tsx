@@ -11,7 +11,7 @@ export default function MobileTopMenu() {
       <div className="flex justify-center gap-6 mt-1">
         <div
           title={Lang.install}
-          className="w-14 h-14 rounded-full bg-[#E62928] flex items-center justify-center cursor-pointer"
+          className="w-14 h-14 rounded-full bg-[#0b923f] flex items-center justify-center cursor-pointer"
         >
           <ArrowDownTrayIcon className="w-6 h-6 font-bold" />
         </div>
