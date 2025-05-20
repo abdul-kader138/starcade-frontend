@@ -97,6 +97,10 @@ opening_day:"Sat–Sun | Closed",
 copyright:"COPYRIGHT © 2025 STARCADE _ ALL RIGHTS RESERVED",
 
 
+// product
+product:"Product",
+
+
 
   profil: "Profile",
   school: "School",

@@ -1,12 +1,12 @@
-import Slider from "~/blocks/Slider";
+import Slider from "~/blocks/home/Slider";
 import Lang from "../lang/lang";
 import type { Route } from "./+types/Home";
-import Section from "~/blocks/Section";
+import Section from "~/blocks/home/Section";
 import { Helper } from "~/utils/helper";
-import Commodorian from "~/blocks/Commodorian";
-import ContactSection from "~/blocks/ContactSection";
-import News from "~/blocks/News";
-import Faq from "~/blocks/Faq";
+import Commodorian from "~/blocks/home/Commodorian";
+import ContactSection from "~/blocks/home/ContactSection";
+import News from "~/blocks/home/News";
+import Faq from "~/blocks/home/Faq";
 
 export function meta({}: Route.MetaArgs) {
   return [

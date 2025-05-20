@@ -10,13 +10,13 @@ import type { Route } from "./+types/root";
 import "./app.css"; // Ensure custom CSS is included here
 import { UserProvider } from "./provider/userContext";
 import { Header } from "./blocks/Header";
-import Slider from "./blocks/Slider";
-import Commodorian from "./blocks/Commodorian";
-import ContactSection from "./blocks/ContactSection";
-import News from "./blocks/News";
-import Section from "./blocks/Section";
+import Slider from "./blocks/home/Slider";
+import Commodorian from "./blocks/home/Commodorian";
+import ContactSection from "./blocks/home/ContactSection";
+import News from "./blocks/home/News";
+import Section from "./blocks/home/Section";
 import { Helper } from "./utils/helper";
-import Faq from "./blocks/Faq";
+import Faq from "./blocks/home/Faq";
 import Footer from "./blocks/Footer";
 
 // 🔹 Global Layout

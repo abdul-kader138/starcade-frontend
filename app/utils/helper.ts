@@ -512,5 +512,17 @@ slidesVertical = [
 ];
 
 
+productSlides = [
+  {
+    type: "video",
+    src: "/videos/product/mr.mp4",
+    poster: "/videos/product/thumbnail.png",
+  },
+  { type: "image", src: "/images/products/product/image1.png" },
+  { type: "image", src: "/images/products/product/image2.png" },
+  { type: "image", src: "/images/products/product/image3.png" },
+  { type: "image", src: "/images/products/product/image4.png" },
+];
+
 
 }
