@@ -525,4 +525,51 @@ productSlides = [
 ];
 
 
+productDetailsData = {
+  title: "Millennium Runners",
+  intro: [
+    "The race of the millennium is about to begin.",
+    "Millennium Runners is the ultimate anti-gravity racing experience: speed beyond all limits, adrenaline-fueled circuits and four racing teams ready for anything to win the Millennium Cup.",
+    "In this remote future, where speed is synonymous with power and the racetrack is the battleground, only the best will join the legend. Take on adrenaline-pumping challenges, dominate corners with breathtaking manoeuvres, and make your mark on galactic racing history."
+  ],
+  featuresTitle: "Key Features",
+  features: [
+    {
+      title: "Limitless Speed",
+      description: "Thrilling top-speed experience with smooth, responsive controls."
+    },
+    {
+      title: "Iconic Circuits",
+      description: "Race across remote planets, vertical cities, and magnetic storms."
+    },
+    {
+      title: "Legendary Teams",
+      description: "Choose from four elite racing teams, each with unique technology and philosophy."
+    }
+  ],
+  expanded: [
+    "Born from the vision of self-made prodigy William Baxter, this company symbolizes the dream of becoming a racing legend. Through dedication, he built one of the most iconic firms in anti-gravity engineering.",
+    "Apex Motors, the oldest major racing team, stands as a direct rival to Vortex Avionics. It fosters an elite image by selecting only top-tier athletes through a rigorous process.",
+    "Retropulse Dynamics, a rising star from GRF’s outer worlds, aims to empower individuals against corporate exploitation. It’s the underdog pushing innovation in engine tech."
+  ]
+};
+
+
+  productCartDetails = {
+    title: "Millennium Runners",
+    price: "9,75 €",
+    tags: ["Racing", "Sport", "Fights", "3D"],
+    description:
+      "The ultimate anti-gravity racing experience. Millennium Runners is an homage to classic arcade racing games. Speed through futuristic cities and planets in adrenaline-fueled competitions. Choose your team, conquer the Millennium Cup, and race your way into legend!",
+    editions: ["STANDARD", "EXTENDED"],
+    releaseDate: "18 Apr, 2025",
+    developer: "Commodore Sinapsy",
+    publisher: "Over The Game",
+    language: "English (Audio, Interface)",
+    mode: "Single-Player",
+    controllerSupport: "Xbox Controllers",
+  };
+
+
+
 }

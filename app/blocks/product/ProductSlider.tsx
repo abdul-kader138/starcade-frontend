@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { FaPlay, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Helper } from "~/utils/helper";
+import ProductDetails from "./ProductDetails";
 
 export default function ProductSlider() {
   const { productSlides } = new Helper();
@@ -110,7 +111,7 @@ export default function ProductSlider() {
       return (
         <div
           key={transitionKey}
-          className="w-full aspect-video relative overflow-hidden rounded-xl"
+          className="w-full aspect-video relative overflow-hidden border-1 border-[#002459] rounded-3xl"
         >
           <video
             ref={videoRef}
@@ -125,7 +126,7 @@ export default function ProductSlider() {
           {!isVideoPlaying && (
             <button
               onClick={handlePlayClick}
-              className="absolute inset-0 flex items-center justify-center bg-black/30 z-10"
+              className="absolute inset-0 flex items-center cursor-pointer justify-center bg-black/30 z-10"
             >
               <div className="bg-white/40 hover:bg-white/60 rounded-full p-4 transition">
                 <FaPlay className="text-white text-3xl" />
@@ -147,14 +148,14 @@ export default function ProductSlider() {
   };
 
   return (
-    <div className="w-full px-4 py-6  text-white rounded-xl">
+    <div className="w-full text-white rounded-xl">
       {/* Main Slide */}
       <div className="mb-6">{renderMain()}</div>
 
       {/* Thumbnails Carousel */}
-      <div className="relative flex items-center min-h-[70px]">
+      <div className="relative flex items-center mx-1 min-h-[70px]">
         <button
-          className="absolute left-0 z-10 p-2 rounded-full mx-2 bg-gray-600"
+          className="absolute cursor-pointer left-0 z-10 p-2 rounded-full bg-gray-600"
           onClick={goToPrevious}
         >
           <FaChevronLeft className="text-white w-6 h-6" />
@@ -189,12 +190,14 @@ export default function ProductSlider() {
         </div>
 
         <button
-          className="absolute right-0 z-10 p-2 rounded-full mr-2 bg-gray-600"
+          className="absolute right-0 z-10 p-2 cursor-pointer rounded-full mr-2 bg-gray-600"
           onClick={goToNext}
         >
           <FaChevronRight className="text-white w-6 h-6" />
         </button>
       </div>
+
+      <ProductDetails />
     </div>
   );
 }
