@@ -610,25 +610,25 @@ productAddOns = [
     title: "Steel Saviour",
     edition: "Standard Edition",
     price: "5,99 €",
-    image: "/images/products/other-section/steel-saviour.PNG", // replace with actual path
+    image: "/images/products/other-section/steel-saviour.png", 
   },
   {
     title: "Red Rum",
     edition: "Standard Edition",
     price: "0,99 €",
-    image: "/images/red-rum.jpg",
+    image: "/images/products/other-section/redrum.png",
   },
   {
     title: "11 Years Ago",
     edition: "Standard Edition",
     price: "4,99 €",
-    image: "/images/11-years-ago.jpg",
+    image: "/images/products/other-section/11-years-ago.png",
   },
   {
     title: "Cheers!",
     edition: "Standard Edition",
     price: "4,99 €",
-    image: "/images/cheers.jpg",
+    image: "/images/products/other-section/cheers.png",
   },
 ];
 
