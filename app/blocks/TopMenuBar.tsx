@@ -2,8 +2,6 @@ import { Helper } from "~/utils/helper";
 import Lang from "~/lang/lang";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/solid";
 
-const helper = new Helper();
-
 export default function Navbar() {
   return (
     <div className="max-w-[1600px] mx-auto flex">

@@ -1,3 +1,4 @@
+import Lang from "~/lang/lang";
 import { Helper } from "~/utils/helper";
 
 export default function SystemRequirements() {
@@ -12,19 +13,21 @@ export default function SystemRequirements() {
 
   return (
     <section className="text-white py-6 mt-6 space-y-6">
-      <h2 className="text-2xl font-semibold">System requirements</h2>
+      <h2 className="text-2xl font-semibold">{Lang.system_requirements}</h2>
 
       <div className="bg-[#002459] rounded-2xl p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Minimum */}
         <div>
-          <h3 className="text-lg font-semibold text-gray-400 mb-4">MINIMUM</h3>
+          <h3 className="text-lg font-semibold text-gray-400 mb-4">
+            {Lang.minimum}
+          </h3>
           {renderSpecs(requirements.minimum)}
         </div>
 
         {/* Recommended */}
         <div>
           <h3 className="text-lg font-semibold text-gray-400 mb-4">
-            RECOMMENDED
+            {Lang.recommanded}
           </h3>
           {renderSpecs(requirements.recommended)}
         </div>
