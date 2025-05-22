@@ -99,6 +99,21 @@ copyright:"COPYRIGHT © 2025 STARCADE _ ALL RIGHTS RESERVED",
 
 // product
 product:"Product",
+show_more:"Read More",
+show_less:"Show less",
+general_info:"GENERAL INFORMATION",
+release_date:"Release Date",
+developer:"Developer",
+publisher:"Publisher",
+language:"Language",
+game_mode:"Game Modes",
+buy_now:"Buy now",
+add_to_cart:"Add to cart",
+add_to_wishlist:"Add to wishlist",
+more_for_this_game:"More for this game",
+full_controller_support:"full_controller_support",
+other_by_commodore:"Other by Commodore",
+age_info:" *Suitable for all ages. Includes optional in-game purchases.",
 
 
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaWindows } from "react-icons/fa";
+import Lang from "~/lang/lang";
 import { Helper } from "~/utils/helper";
 
 export default function ProductCartDetails() {
@@ -12,7 +13,9 @@ export default function ProductCartDetails() {
       <div className="flex justify-between items-start">
         {/* Left: Title Section */}
         <div>
-          <p className="text-xs text-white/60 mb-1">Home / Games</p>
+          <p className="text-xs text-white/60 mb-1">
+            <a href="/">{Lang.home}</a> / <a href="/">{Lang.games}</a>
+          </p>
           <h2 className="text-xl font-bold leading-tight">{product.title}</h2>
         </div>
 
@@ -58,49 +61,51 @@ export default function ProductCartDetails() {
       {/* CTA Buttons */}
       <div className="space-y-3">
         <button className="w-full bg-white text-black font-semibold text-sm py-2 rounded-full hover:bg-gray-200">
-          Buy now
+          {Lang.buy_now}
         </button>
         <div className="flex gap-4">
           <button className="flex-1 border border-white py-2 text-sm rounded-full hover:bg-white/10">
-            Add to cart
+            {Lang.add_to_cart}
           </button>
           <button className="flex-1 border border-white py-2 text-sm rounded-full bg-[#113861] hover:bg-[#1d4a7a]">
-            Add to wishlist
+            {Lang.add_to_wishlist}
           </button>
         </div>
       </div>
 
       {/* General Information */}
       <div className="border-t border-white/10 pt-4">
-        <h3 className="text-lg font-semibold mb-3">GENERAL INFORMATION</h3>
+        <h3 className="text-lg font-semibold mb-3">{Lang.general_info}</h3>
         <ul className="text-white/80 text-sm space-y-1">
           <li className="flex justify-between">
-            <span className="text-gray-500">Release Date</span>
+            <span className="text-gray-500">{Lang.release_date}</span>
             <span>{product.releaseDate}</span>
           </li>
           <hr className="border-gray-600 w-full my-" />
           <li className="flex justify-between">
-            <span className="text-gray-500">Developer</span>
+            <span className="text-gray-500">{Lang.developer}</span>
             <span>{product.developer}</span>
           </li>
           <hr className="border-gray-600 w-full my-" />
           <li className="flex justify-between">
-            <span className="text-gray-500">Publisher</span>
+            <span className="text-gray-500">{Lang.publisher}</span>
             <span>{product.publisher}</span>
           </li>
           <hr className="border-gray-600 w-full my-" />
           <li className="flex justify-between">
-            <span className="text-gray-500">Language</span>
+            <span className="text-gray-500">{Lang.language}</span>
             <span>{product.language}</span>
           </li>
           <hr className="border-gray-600 w-full my-" />
           <li className="flex justify-between">
-            <span className="text-gray-500">Game Modes</span>
+            <span className="text-gray-500">{Lang.game_mode}</span>
             <span>{product.mode}</span>
           </li>
           <hr className="border-gray-600 w-full my-" />
           <li className="flex justify-between">
-            <span className="text-gray-500">Full Controller Support</span>
+            <span className="text-gray-500">
+              {Lang.full_controller_support}
+            </span>
             <span>{product.controllerSupport}</span>
           </li>
         </ul>
@@ -118,9 +123,7 @@ export default function ProductCartDetails() {
           alt="In-game purchases"
           className="w-6 h-6"
         />
-        <p className="ml-2 text-gray-500 text-xs">
-          *Suitable for all ages. Includes optional in-game purchases.
-        </p>
+        <p className="ml-2 text-gray-500 text-xs">{Lang.age_info}</p>
       </div>
     </div>
   );

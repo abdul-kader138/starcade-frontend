@@ -571,5 +571,66 @@ productDetailsData = {
   };
 
 
+productAddOns = [
+  {
+    id: 1,
+    title: "Millennium Runners Soundtrack",
+    subtitle: "Add-on",
+    description:
+      "Immerse yourself even deeper with the official game soundtrack. A collection of original tracks to relive every moment, anywhere.",
+    price: "1,99 €",
+    image: "/images/products/addon/bg.png", 
+  },
+];
+
+
+ systemRequirements = {
+    minimum: {
+      OS: "Windows 10",
+      Processor: "Intel Core i7-13700H\nAMD Ryzen 7 6800HS",
+      Memory: "16 GB RAM",
+      Graphics: "Intel Iris Xe Graphics G7 96\nAMD Radeon 680M",
+      DirectX: "Version 11",
+      Storage: "15 GB available space",
+      "Visual Settings": "1080p at 30 FPS, low graphics settings,\nupscaler set to quality",
+    },
+    recommended: {
+      OS: "Windows 11",
+      Processor: "Intel Core i7-14650HX\nAMD Ryzen 9 7945HX",
+      Memory: "32 GB RAM",
+      Graphics: "Nvidia GeForce RTX 4060\nAMD Radeon RX 7700S",
+      DirectX: "Version 12",
+      Storage: "15 GB available space",
+      "Visual Settings": "1080p at 60 FPS, high graphics settings,\nupscaler set to quality",
+    },
+  };
+
+  otherSection = [
+  {
+    title: "Steel Saviour",
+    edition: "Standard Edition",
+    price: "5,99 €",
+    image: "/images/products/other-section/steel-saviour.PNG", // replace with actual path
+  },
+  {
+    title: "Red Rum",
+    edition: "Standard Edition",
+    price: "0,99 €",
+    image: "/images/red-rum.jpg",
+  },
+  {
+    title: "11 Years Ago",
+    edition: "Standard Edition",
+    price: "4,99 €",
+    image: "/images/11-years-ago.jpg",
+  },
+  {
+    title: "Cheers!",
+    edition: "Standard Edition",
+    price: "4,99 €",
+    image: "/images/cheers.jpg",
+  },
+];
+
 
 }

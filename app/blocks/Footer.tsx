@@ -12,13 +12,13 @@ export default function Footer() {
       <div className="w-full mx-auto px-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
         {/* Newsletter */}
         <div className="flex flex-col justify-start items-start space-y-4">
-          <h3 className="text-3xl font-semibold">{Lang.join_us}</h3>
+          <h3 className="text-2xl font-semibold">{Lang.join_us}</h3>
           <input
             type="email"
             placeholder="*Email"
-            className="w-full px-4 py-2 rounded-md bg-transparent border border-white/40 placeholder-white/70 focus:outline-none focus:ring-1 focus:ring-white"
+            className="w-full px-4 py-2 rounded-md text-sm bg-transparent border border-white/40 placeholder-white/70 focus:outline-none focus:ring-1 focus:ring-white"
           />
-          <button className="w-full py-2 bg-gray-300 text-black font-semibold rounded-md hover:bg-white transition">
+          <button className="w-full py-2 bg-gray-300 text-black rounded-md hover:bg-white transition">
             {Lang.submit}
           </button>
         </div>
@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="flex flex-col justify-start items-start sm:items-center lg:items-start">
           <div className="space-y-4 text-left sm:text-center lg:text-left">
             <h4 className="text-md font-bold uppercase">Company</h4>
-            <ul className="space-y-1 text-md text-white/80">
+            <ul className="space-y-1 text-sm text-white/80">
               <li>
                 <a href="#">{Lang.about}</a>
               </li>
@@ -53,7 +53,7 @@ export default function Footer() {
             <h4 className="text-md font-bold uppercase">
               <a href="#">{Lang.contact}</a>
             </h4>
-            <p className="text-md text-white/80 leading-relaxed">
+            <p className="text-sm text-white/80 leading-relaxed">
               {Lang.office_address} <br /> - <br /> {Lang.contact_email} <br />{" "}
               - <br /> {Lang.opening_hour} <br /> {Lang.opening_day}
             </p>
@@ -83,7 +83,7 @@ export default function Footer() {
 
         {/* Terms & Refund */}
         <div className="flex flex-col justify-start items-start sm:items-center lg:items-start">
-          <ul className="space-y-1 text-md text-white/80 text-left sm:text-center lg:text-left">
+          <ul className="space-y-1 text-sm text-white/80 text-left sm:text-center lg:text-left">
             <li>
               <a href="#">{Lang.terms}</a>
             </li>
@@ -95,7 +95,7 @@ export default function Footer() {
 
         {/* Privacy Policy */}
         <div className="flex flex-col justify-start items-start sm:items-center lg:items-start">
-          <ul className="space-y-1 text-md text-white/80 text-left sm:text-center lg:text-left">
+          <ul className="space-y-1 text-sm text-white/80 text-left sm:text-center lg:text-left">
             <li>
               <a href="#">{Lang.privacy}</a>
             </li>
@@ -107,7 +107,7 @@ export default function Footer() {
 
         {/* License & Company Info */}
         <div className="flex flex-col justify-start items-start sm:items-center lg:items-end">
-          <ul className="space-y-1 text-md text-white/80 text-left sm:text-center lg:text-right">
+          <ul className="space-y-1 text-sm text-white/80 text-left sm:text-center lg:text-right">
             <li>
               <a href="#">{Lang.license}</a>
             </li>

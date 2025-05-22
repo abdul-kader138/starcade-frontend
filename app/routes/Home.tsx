@@ -10,7 +10,7 @@ import Faq from "~/blocks/home/Faq";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: Lang.title + " - " + Lang.home },
+    { title: Lang.title + " | " + Lang.home },
     { name: "description", content: Lang.welcome_fx + " - " + Lang.home },
   ];
 }

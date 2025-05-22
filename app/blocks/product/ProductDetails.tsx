@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import Lang from "~/lang/lang";
 import { Helper } from "~/utils/helper";
 
 export default function ProductDetails() {
@@ -50,11 +51,11 @@ export default function ProductDetails() {
       >
         {isExpanded ? (
           <>
-            Show less <FaChevronUp className="text-sm" />
+            {Lang.show_less} <FaChevronUp className="text-sm" />
           </>
         ) : (
           <>
-            Read more <FaChevronDown className="text-sm" />
+            {Lang.show_more} <FaChevronDown className="text-sm" />
           </>
         )}
       </button>

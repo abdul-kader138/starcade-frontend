@@ -10,11 +10,14 @@ import Faq from "~/blocks/home/Faq";
 import { useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import ProductSlider from "~/blocks/product/ProductSlider";
-import ProductCartDetails from "~/blocks/product/ProductCartDetails";
+import ProductCartDetails from "~/blocks/product/ProductCartDetails.tsx";
+import ProductAddOn from "~/blocks/product/ProductAddOn";
+import SystemRequirements from "~/blocks/product/SystemRequirements";
+import OtherByCommodore from "~/blocks/product/OtherSection";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: Lang.title + " - " + Lang.product },
+    { title: Lang.title + " | " + Lang.product },
     { name: "description", content: Lang.welcome_fx + " - " + Lang.product },
   ];
 }
@@ -24,16 +27,26 @@ export default function Product() {
 
   const { gameSections } = new Helper();
   return (
-    <div className="flex flex-col-reverse lg:flex-row gap-2 px-4 lg:px-22">
-      {/* ProductSlider – second on mobile, first on desktop */}
-      <div className="w-full lg:w-[68%]">
-        <ProductSlider />
-      </div>
+    <>
+      <div className="flex flex-col-reverse lg:flex-row gap-2 px-4 lg:px-22">
+        {/* ProductSlider – second on mobile, first on desktop */}
+        <div className="w-full lg:w-[68%]">
+          <ProductSlider />
+        </div>
 
-      {/* ProductCartDetails – first on mobile, second on desktop */}
-      <div className="w-full lg:w-[32%]">
-        <ProductCartDetails />
+        {/* ProductCartDetails – first on mobile, second on desktop */}
+        <div className="w-full lg:w-[32%]">
+          <ProductCartDetails />
+        </div>
       </div>
-    </div>
+      <div className="flex flex-col lg:flex-row gap-2 px-4 lg:px-22">
+        {/* ProductSlider – second on mobile, first on desktop */}
+        <div className="w-full lg:w-[68%]">
+          <ProductAddOn />
+          <SystemRequirements />
+          <OtherByCommodore />
+        </div>
+      </div>
+    </>
   );
 }
