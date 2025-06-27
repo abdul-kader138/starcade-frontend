@@ -233,11 +233,11 @@ export default function EditProfile() {
         </div>
       </div>
 
-      <div className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+      <div className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-1 gap-4 max-w-5xl mx-auto">
         {/* Profile Edit Form */}
         <div className="md:col-span-2">
           <h3 className="text-red-500 text-md font-bold">
-            {Lang.edit_profile}
+            {Lang.profile}
             {error && (
               <p className="text-red-500 text-sm text-center mt-2">{error}</p>
             )}
@@ -296,35 +296,13 @@ export default function EditProfile() {
           <div className="mt-6 flex space-x-3">
             <button
               onClick={handleSubmit}
-              className="bg-red-500 px-2 cursor-pointer py-1 text-sm rounded-md shadow-md hover:bg-red-600 transition transform hover:scale-110"
+              className="bg-[#002459]  px-4 cursor-pointer py-2 text-sm rounded-md shadow-md hover:bg-red-600 transition transform hover:scale-110"
             >
               {loading ? (
                 <FaSpinner className="animate-spin mr-2 text-xl" />
               ) : (
                 Lang.save
               )}
-            </button>
-          </div>
-        </div>
-
-        {/* Wallet Section (Right) */}
-        <div className="bg-gray-800 p-6 md:p-8 rounded-md mt-4 md:mt-1 mx-1 shadow-xl h-52 hover:shadow-2xl transition transform hover:scale-105">
-          <div className="flex justify-between items-center">
-            <h3 className="text-red-500 text-md font-bold">{Lang.walet}</h3>
-          </div>
-          <p className="text-xs text-white">{Lang.balance}</p>
-          <h2 className="text-xl font-bold">FX {100}</h2>
-
-          {/* Buttons */}
-          <div className="mt-4 flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-3">
-            <button className="bg-gradient-to-r from-red-500 to-orange-500 px-1.5 py-1 text-sm rounded-md shadow-md hover:bg-red-600 transition transform hover:scale-110">
-              {Lang.withdrwal}
-            </button>
-            <button
-              onClick={() => handleClickRedirect("/add-card")}
-              className="bg-gray-700 px-1.5 text-sm py-1 cursor-pointer rounded-md shadow-md hover:bg-gray-600 transition transform hover:scale-110"
-            >
-              {Lang.add_more}
             </button>
           </div>
         </div>

@@ -20,11 +20,21 @@ export class Helper {
     withCredentials: true,
   });
 
-   navigation = [
-    { name: Lang.games, href: "#", current: false,subItems: ["Submenu 1", "Submenu 2"] },
-    { name: Lang.about, href: "#", current: false ,subItems: ["Submenu 1"]},
-    { name: Lang.news, href: "#", current: false ,subItems: ["Submenu 1" ]},
-    { name: Lang.contact, href: "#", current: false,subItems: ["Submenu 1", "Submenu 2"] },
+  navigation = [
+    {
+      name: Lang.games,
+      href: "#",
+      current: false,
+      subItems: ["Submenu 1", "Submenu 2"],
+    },
+    { name: Lang.about, href: "#", current: false, subItems: ["Submenu 1"] },
+    { name: Lang.news, href: "#", current: false, subItems: ["Submenu 1"] },
+    {
+      name: Lang.contact,
+      href: "#",
+      current: false,
+      subItems: ["Submenu 1", "Submenu 2"],
+    },
   ];
 
   validateEmail = (email: string) => {
@@ -224,163 +234,162 @@ export class Helper {
   ];
 
   slidesHorizental = [
-  {
-    image: "/images/slider/slider2.webp",
-    title: Lang.millennium_runners,
-    description: Lang.millennium_runners_content,
-    upcoming:false,
-    preOrder:false,
-  },
-  {
-    image: "/images/slider/slider1.webp",
-    title: "All times hit",
-    description: "Discover the future of gaming...",
-    upcoming:true,
-    preOrder:true,
-  },
-  {
-    image: "/images/slider/slider3.webp",
-    title: "Explore Planets",
-    description: "Speed through cities and planets...",
-    upcoming:true,
-    preOrder:true,
-  },
-  {
-    image: "/images/slider/slider2.webp",
-    title: "This is you new experience.....",
-    description: Lang.millennium_runners_content,
-    upcoming:true,
-    preOrder:true,
-  },
-  {
-    image: "/images/slider/slider1.webp",
-    title: "Enjoy the season",
-    description: "Discover the future of gaming...",
-    upcoming:true,
-    preOrder:true,
-  },
-];
+    {
+      image: "/images/slider/slider2.webp",
+      title: Lang.millennium_runners,
+      description: Lang.millennium_runners_content,
+      upcoming: false,
+      preOrder: false,
+    },
+    {
+      image: "/images/slider/slider1.webp",
+      title: "All times hit",
+      description: "Discover the future of gaming...",
+      upcoming: true,
+      preOrder: true,
+    },
+    {
+      image: "/images/slider/slider3.webp",
+      title: "Explore Planets",
+      description: "Speed through cities and planets...",
+      upcoming: true,
+      preOrder: true,
+    },
+    {
+      image: "/images/slider/slider2.webp",
+      title: "This is you new experience.....",
+      description: Lang.millennium_runners_content,
+      upcoming: true,
+      preOrder: true,
+    },
+    {
+      image: "/images/slider/slider1.webp",
+      title: "Enjoy the season",
+      description: "Discover the future of gaming...",
+      upcoming: true,
+      preOrder: true,
+    },
+  ];
 
-slidesVertical = [
-  {
-    title: Lang.participate_beta,
-    image: "/images/slider/beta-test.png",
-    bgcolor: "#E62928",
-  },
-  {
-    title: Lang.new_arrive,
-    image: "/images/slider/new-title.png",
-    bgcolor: "#E5632F",
-  },
-  {
-    title: Lang.countdown,
-    image: "/images/slider/countdown.png",
-    bgcolor: "#D4C52F",
-  },
-  {
-    title: Lang.community_discord,
-    image: "/images/slider/discord.png",
-    bgcolor: "#52A04D",
-  },
-  {
-    title: Lang.new_aggrement,
-    image: "/images/slider/update.png",
-    bgcolor: "#3B98BC",
-  },
-];
+  slidesVertical = [
+    {
+      title: Lang.participate_beta,
+      image: "/images/slider/beta-test.png",
+      bgcolor: "#E62928",
+    },
+    {
+      title: Lang.new_arrive,
+      image: "/images/slider/new-title.png",
+      bgcolor: "#E5632F",
+    },
+    {
+      title: Lang.countdown,
+      image: "/images/slider/countdown.png",
+      bgcolor: "#D4C52F",
+    },
+    {
+      title: Lang.community_discord,
+      image: "/images/slider/discord.png",
+      bgcolor: "#52A04D",
+    },
+    {
+      title: Lang.new_aggrement,
+      image: "/images/slider/update.png",
+      bgcolor: "#3B98BC",
+    },
+  ];
 
- gameSections:Section[] = [
-  {
-    id: 1,
-    title: Lang.steel_saviour,
-    date: Lang.steel_saviour_date,
-    description: Lang.steel_saviour_details,
-    image: "/images/game-section/steel_savior.jpg",
-  },
-  {
-    id: 2,
-    title: Lang.eleven_years_ago,
-    date: Lang.eleven_years_ago_year,
-    description: Lang.eleven_years_ago_details,
-    image: "/images/game-section/eleven_years_ago.jpg",
-  },
-  {
-    id: 3,
-    title: Lang.red_rum,
-    date: Lang.red_rum_year,
-    description: Lang.red_rum_details,
-    image: "/images/game-section/redrum.png",
-  },
-];
+  gameSections: Section[] = [
+    {
+      id: 1,
+      title: Lang.steel_saviour,
+      date: Lang.steel_saviour_date,
+      description: Lang.steel_saviour_details,
+      image: "/images/game-section/steel_savior.jpg",
+    },
+    {
+      id: 2,
+      title: Lang.eleven_years_ago,
+      date: Lang.eleven_years_ago_year,
+      description: Lang.eleven_years_ago_details,
+      image: "/images/game-section/eleven_years_ago.jpg",
+    },
+    {
+      id: 3,
+      title: Lang.red_rum,
+      date: Lang.red_rum_year,
+      description: Lang.red_rum_details,
+      image: "/images/game-section/redrum.png",
+    },
+  ];
 
- newsSection:Section[] = [
-  {
-    id: 1,
-    title: Lang.commodore_industries,
-    date: Lang.commodore_industries_year,
-    description: Lang.commodore_industries_details,
-    image: "/images/news-section/1.png",
-  },
-  {
-    id: 2,
-    title: Lang.significant_progress,
-    date: Lang.significant_progress_year,
-    description: Lang.significant_progress_details,
-    image: "/images/news-section/2.png",
-  },
-  {
-    id: 3,
-    title: Lang.commodore_reviews,
-    date: Lang.commodore_reviews_date,
-    description: Lang.commodore_industries_details,
-    image: "/images/news-section/3.png",
-  },
-  {
-    id: 4,
-    title: Lang.commodore_industries,
-    date: Lang.commodore_industries_year,
-    description: Lang.commodore_industries_details,
-    image: "/images/news-section/1.png",
-  },
-  {
-    id: 5,
-    title: Lang.significant_progress,
-    date: Lang.significant_progress_year,
-    description: Lang.significant_progress_details,
-    image: "/images/news-section/2.png",
-  },
-  {
-    id: 6,
-    title: Lang.commodore_reviews,
-    date: Lang.commodore_reviews_date,
-    description: Lang.commodore_industries_details,
-    image: "/images/news-section/3.png",
-  },
-  {
-    id: 7,
-    title: Lang.commodore_industries,
-    date: Lang.commodore_industries_year,
-    description: Lang.commodore_industries_details,
-    image: "/images/news-section/1.png",
-  },
-  {
-    id: 8,
-    title: Lang.significant_progress,
-    date: Lang.significant_progress_year,
-    description: Lang.significant_progress_details,
-    image: "/images/news-section/2.png",
-  },
-  {
-    id: 9,
-    title: Lang.commodore_reviews,
-    date: Lang.commodore_reviews_date,
-    description: Lang.commodore_industries_details,
-    image: "/images/news-section/3.png",
-  },
-  
-];
+  newsSection: Section[] = [
+    {
+      id: 1,
+      title: Lang.commodore_industries,
+      date: Lang.commodore_industries_year,
+      description: Lang.commodore_industries_details,
+      image: "/images/news-section/1.png",
+    },
+    {
+      id: 2,
+      title: Lang.significant_progress,
+      date: Lang.significant_progress_year,
+      description: Lang.significant_progress_details,
+      image: "/images/news-section/2.png",
+    },
+    {
+      id: 3,
+      title: Lang.commodore_reviews,
+      date: Lang.commodore_reviews_date,
+      description: Lang.commodore_industries_details,
+      image: "/images/news-section/3.png",
+    },
+    {
+      id: 4,
+      title: Lang.commodore_industries,
+      date: Lang.commodore_industries_year,
+      description: Lang.commodore_industries_details,
+      image: "/images/news-section/1.png",
+    },
+    {
+      id: 5,
+      title: Lang.significant_progress,
+      date: Lang.significant_progress_year,
+      description: Lang.significant_progress_details,
+      image: "/images/news-section/2.png",
+    },
+    {
+      id: 6,
+      title: Lang.commodore_reviews,
+      date: Lang.commodore_reviews_date,
+      description: Lang.commodore_industries_details,
+      image: "/images/news-section/3.png",
+    },
+    {
+      id: 7,
+      title: Lang.commodore_industries,
+      date: Lang.commodore_industries_year,
+      description: Lang.commodore_industries_details,
+      image: "/images/news-section/1.png",
+    },
+    {
+      id: 8,
+      title: Lang.significant_progress,
+      date: Lang.significant_progress_year,
+      description: Lang.significant_progress_details,
+      image: "/images/news-section/2.png",
+    },
+    {
+      id: 9,
+      title: Lang.commodore_reviews,
+      date: Lang.commodore_reviews_date,
+      description: Lang.commodore_industries_details,
+      image: "/images/news-section/3.png",
+    },
+  ];
 
- commodorian = [
+  commodorian = [
     {
       id: 16,
       title: "Sid Meier’s CIVILIZATION",
@@ -396,7 +405,7 @@ slidesVertical = [
       title: "XENON",
       image: "/images/commodorian/xenon.png",
     },
-    
+
     {
       id: 13,
       title: "SANTORO",
@@ -413,7 +422,7 @@ slidesVertical = [
       image: "/images/commodorian/turrican.png",
     },
 
-   {
+    {
       id: 22,
       title: "Sid Meier’s CIVILIZATION",
       image: "/images/commodorian/civilization.png",
@@ -428,7 +437,7 @@ slidesVertical = [
       title: "XENON",
       image: "/images/commodorian/xenon.png",
     },
-    
+
     {
       id: 19,
       title: "SANTORO",
@@ -445,7 +454,6 @@ slidesVertical = [
       image: "/images/commodorian/turrican.png",
     },
 
-
     {
       id: 28,
       title: "Sid Meier’s CIVILIZATION",
@@ -461,7 +469,7 @@ slidesVertical = [
       title: "XENON",
       image: "/images/commodorian/xenon.png",
     },
-    
+
     {
       id: 25,
       title: "SANTORO",
@@ -477,83 +485,82 @@ slidesVertical = [
       title: "Turrican",
       image: "/images/commodorian/turrican.png",
     },
-
   ];
 
   faqItems = [
-  {
-    id: 1,
-    question: "How do I report a bug or give feedback on a game?",
-    answer:
-      "You can report bugs or feedback through the support section of the game or by contacting our support team directly.",
-    color: "#EC2124",
-  },
-  {
-    id: 2,
-    question: "Can I access my game library on multiple devices?",
-    answer:
-      "Yes, you can access your STARCADE library from any supported device by logging in with your account.",
-    color: "#E5622F",
-  },
-  {
-    id: 3,
-    question: "Are STARCADE games available on other platforms?",
-    answer:
-      "Most STARCADE games are available on PC, mobile, and select consoles. Availability may vary.",
-    color: "#D4C52F",
-  },
-  {
-    id: 4,
-    question: "How do I download and install the game?",
-    answer:
-      "You can download and install games directly from your STARCADE dashboard after logging in.",
-    color: "#5CAC58",
-  },
-];
-
-
-productSlides = [
-  {
-    type: "video",
-    src: "/videos/product/mr.mp4",
-    poster: "/videos/product/thumbnail.png",
-  },
-  { type: "image", src: "/images/products/product/image1.png" },
-  { type: "image", src: "/images/products/product/image2.png" },
-  { type: "image", src: "/images/products/product/image3.png" },
-  { type: "image", src: "/images/products/product/image4.png" },
-];
-
-
-productDetailsData = {
-  title: "Millennium Runners",
-  intro: [
-    "The race of the millennium is about to begin.",
-    "Millennium Runners is the ultimate anti-gravity racing experience: speed beyond all limits, adrenaline-fueled circuits and four racing teams ready for anything to win the Millennium Cup.",
-    "In this remote future, where speed is synonymous with power and the racetrack is the battleground, only the best will join the legend. Take on adrenaline-pumping challenges, dominate corners with breathtaking manoeuvres, and make your mark on galactic racing history."
-  ],
-  featuresTitle: "Key Features",
-  features: [
     {
-      title: "Limitless Speed",
-      description: "Thrilling top-speed experience with smooth, responsive controls."
+      id: 1,
+      question: "How do I report a bug or give feedback on a game?",
+      answer:
+        "You can report bugs or feedback through the support section of the game or by contacting our support team directly.",
+      color: "#EC2124",
     },
     {
-      title: "Iconic Circuits",
-      description: "Race across remote planets, vertical cities, and magnetic storms."
+      id: 2,
+      question: "Can I access my game library on multiple devices?",
+      answer:
+        "Yes, you can access your STARCADE library from any supported device by logging in with your account.",
+      color: "#E5622F",
     },
     {
-      title: "Legendary Teams",
-      description: "Choose from four elite racing teams, each with unique technology and philosophy."
-    }
-  ],
-  expanded: [
-    "Born from the vision of self-made prodigy William Baxter, this company symbolizes the dream of becoming a racing legend. Through dedication, he built one of the most iconic firms in anti-gravity engineering.",
-    "Apex Motors, the oldest major racing team, stands as a direct rival to Vortex Avionics. It fosters an elite image by selecting only top-tier athletes through a rigorous process.",
-    "Retropulse Dynamics, a rising star from GRF’s outer worlds, aims to empower individuals against corporate exploitation. It’s the underdog pushing innovation in engine tech."
-  ]
-};
+      id: 3,
+      question: "Are STARCADE games available on other platforms?",
+      answer:
+        "Most STARCADE games are available on PC, mobile, and select consoles. Availability may vary.",
+      color: "#D4C52F",
+    },
+    {
+      id: 4,
+      question: "How do I download and install the game?",
+      answer:
+        "You can download and install games directly from your STARCADE dashboard after logging in.",
+      color: "#5CAC58",
+    },
+  ];
 
+  productSlides = [
+    {
+      type: "video",
+      src: "/videos/product/mr.mp4",
+      poster: "/videos/product/thumbnail.png",
+    },
+    { type: "image", src: "/images/products/product/image1.png" },
+    { type: "image", src: "/images/products/product/image2.png" },
+    { type: "image", src: "/images/products/product/image3.png" },
+    { type: "image", src: "/images/products/product/image4.png" },
+  ];
+
+  productDetailsData = {
+    title: "Millennium Runners",
+    intro: [
+      "The race of the millennium is about to begin.",
+      "Millennium Runners is the ultimate anti-gravity racing experience: speed beyond all limits, adrenaline-fueled circuits and four racing teams ready for anything to win the Millennium Cup.",
+      "In this remote future, where speed is synonymous with power and the racetrack is the battleground, only the best will join the legend. Take on adrenaline-pumping challenges, dominate corners with breathtaking manoeuvres, and make your mark on galactic racing history.",
+    ],
+    featuresTitle: "Key Features",
+    features: [
+      {
+        title: "Limitless Speed",
+        description:
+          "Thrilling top-speed experience with smooth, responsive controls.",
+      },
+      {
+        title: "Iconic Circuits",
+        description:
+          "Race across remote planets, vertical cities, and magnetic storms.",
+      },
+      {
+        title: "Legendary Teams",
+        description:
+          "Choose from four elite racing teams, each with unique technology and philosophy.",
+      },
+    ],
+    expanded: [
+      "Born from the vision of self-made prodigy William Baxter, this company symbolizes the dream of becoming a racing legend. Through dedication, he built one of the most iconic firms in anti-gravity engineering.",
+      "Apex Motors, the oldest major racing team, stands as a direct rival to Vortex Avionics. It fosters an elite image by selecting only top-tier athletes through a rigorous process.",
+      "Retropulse Dynamics, a rising star from GRF’s outer worlds, aims to empower individuals against corporate exploitation. It’s the underdog pushing innovation in engine tech.",
+    ],
+  };
 
   productCartDetails = {
     title: "Millennium Runners",
@@ -570,21 +577,19 @@ productDetailsData = {
     controllerSupport: "Xbox Controllers",
   };
 
+  productAddOns = [
+    {
+      id: 1,
+      title: "Millennium Runners Soundtrack",
+      subtitle: "Add-on",
+      description:
+        "Immerse yourself even deeper with the official game soundtrack. A collection of original tracks to relive every moment, anywhere.",
+      price: "1,99 €",
+      image: "/images/products/addon/bg.png",
+    },
+  ];
 
-productAddOns = [
-  {
-    id: 1,
-    title: "Millennium Runners Soundtrack",
-    subtitle: "Add-on",
-    description:
-      "Immerse yourself even deeper with the official game soundtrack. A collection of original tracks to relive every moment, anywhere.",
-    price: "1,99 €",
-    image: "/images/products/addon/bg.png", 
-  },
-];
-
-
- systemRequirements = {
+  systemRequirements = {
     minimum: {
       OS: "Windows 10",
       Processor: "Intel Core i7-13700H\nAMD Ryzen 7 6800HS",
@@ -592,7 +597,8 @@ productAddOns = [
       Graphics: "Intel Iris Xe Graphics G7 96\nAMD Radeon 680M",
       DirectX: "Version 11",
       Storage: "15 GB available space",
-      "Visual Settings": "1080p at 30 FPS, low graphics settings,\nupscaler set to quality",
+      "Visual Settings":
+        "1080p at 30 FPS, low graphics settings,\nupscaler set to quality",
     },
     recommended: {
       OS: "Windows 11",
@@ -601,36 +607,35 @@ productAddOns = [
       Graphics: "Nvidia GeForce RTX 4060\nAMD Radeon RX 7700S",
       DirectX: "Version 12",
       Storage: "15 GB available space",
-      "Visual Settings": "1080p at 60 FPS, high graphics settings,\nupscaler set to quality",
+      "Visual Settings":
+        "1080p at 60 FPS, high graphics settings,\nupscaler set to quality",
     },
   };
 
   otherSection = [
-  {
-    title: "Steel Saviour",
-    edition: "Standard Edition",
-    price: "5,99 €",
-    image: "/images/products/other-section/steel-saviour.png", 
-  },
-  {
-    title: "Red Rum",
-    edition: "Standard Edition",
-    price: "0,99 €",
-    image: "/images/products/other-section/redrum.png",
-  },
-  {
-    title: "11 Years Ago",
-    edition: "Standard Edition",
-    price: "4,99 €",
-    image: "/images/products/other-section/11-years-ago.png",
-  },
-  {
-    title: "Cheers!",
-    edition: "Standard Edition",
-    price: "4,99 €",
-    image: "/images/products/other-section/cheers.png",
-  },
-];
-
-
+    {
+      title: "Steel Saviour",
+      edition: "Standard Edition",
+      price: "5,99 €",
+      image: "/images/products/other-section/steel-saviour.png",
+    },
+    {
+      title: "Red Rum",
+      edition: "Standard Edition",
+      price: "0,99 €",
+      image: "/images/products/other-section/redrum.png",
+    },
+    {
+      title: "11 Years Ago",
+      edition: "Standard Edition",
+      price: "4,99 €",
+      image: "/images/products/other-section/11-years-ago.png",
+    },
+    {
+      title: "Cheers!",
+      edition: "Standard Edition",
+      price: "4,99 €",
+      image: "/images/products/other-section/cheers.png",
+    },
+  ];
 }

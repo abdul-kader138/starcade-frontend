@@ -62,12 +62,18 @@ export default function ResetPassword() {
   };
 
   return (
-    <div className="mx-4 my-8 py-4 bg-gray-900 text-white flex justify-center items-center">
+    <div className="bg-[#000f26] flex items-center justify-center p-4">
       <Toaster position="top-right" />
-      <form className="bg-gray-800 p-8 rounded-xl shadow-md w-full max-w-md">
-        <div className="text-center mb-2">
-          <img src="/logo.png" alt="Logo" className="mx-auto h-16 w-20" />
-          <h5 className="text-md font-bold text-white mt-2">{Lang.reset_password}</h5>
+      <form className="bg-gray-800 p-8 rounded-xl shadow-md w-full max-w-3xl">
+        <div className="text-center mb-6">
+          <img
+            src="/images/logos/starcade-logo.png"
+            alt="Logo"
+            className="mx-auto h-9 w-auto"
+          />
+          <h5 className="text-md font-bold text-white my-6">
+            {Lang.reset_password}
+          </h5>
         </div>
         {error && (
           <p className="text-red-500 text-sm text-center mt-2">{error}</p>
@@ -89,13 +95,17 @@ export default function ResetPassword() {
           required
         />
         <button
-            type="button"
-            disabled={loading}
-            onClick={handleResetPassword}
-            className="w-full py-3 text-sm bg-gray-600 hover:bg-gray-500 text-white font-semibold rounded cursor-pointer mb-3 flex items-center justify-center"
-          >
-            {loading ? <FaSpinner className="animate-spin text-xl" /> :  Lang.continue}
-          </button>
+          type="button"
+          disabled={loading}
+          onClick={handleResetPassword}
+          className="w-full py-3 text-sm bg-[#113861] hover:bg-[#3b4e64] text-white font-semibold rounded cursor-pointer mb-3 flex items-center justify-center"
+        >
+          {loading ? (
+            <FaSpinner className="animate-spin text-xl" />
+          ) : (
+            Lang.continue
+          )}
+        </button>
       </form>
     </div>
   );

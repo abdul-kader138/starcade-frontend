@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import { FaFacebook, FaGithub, FaGoogle, FaSpinner, FaSteam, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaGoogle,
+  FaSpinner,
+  FaSteam,
+} from "react-icons/fa";
 import type { Route } from "../+types/Home";
 import Lang from "../../lang/lang";
 import { Helper } from "../../utils/helper";
@@ -60,13 +66,16 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
+    <div className="bg-[#000f26] flex items-center justify-center p-4">
       <Toaster position="top-right" reverseOrder={false} />
 
-      <div className="bg-gray-800 rounded-lg shadow-xl p-8 w-full max-w-md">
-        <div className="text-center mb-6">
-          <img src="/logo.png" alt="Logo" className="mx-auto h-16 w-20" />
-          <h5 className="text-lg font-bold text-white mt-2">{Lang.login}</h5>
+      <div className="bg-gray-800 rounded-lg shadow-xl p-8  w-full max-w-3xl">
+        <div className="text-center mb-15">
+          <img
+            src="/images/logos/starcade-logo.png"
+            alt="Logo"
+            className="mx-auto h-9 w-auto"
+          />
         </div>
 
         {error && <p className="text-red-500 text-center mb-2">{error}</p>}
@@ -91,26 +100,42 @@ export default function Login() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 text-sm bg-gray-600 hover:bg-gray-500 text-white font-semibold rounded cursor-pointer mb-3 flex items-center justify-center"
+            className="w-full py-3 text-sm bg-[#113861] hover:bg-[#3b4e64] text-white font-semibold rounded cursor-pointer mb-3 flex items-center justify-center"
           >
-            {loading ? <FaSpinner className="animate-spin text-xl" /> : "🔒 " + Lang.login}
+            {loading ? (
+              <FaSpinner className="animate-spin text-xl" />
+            ) : (
+              "🔒 " + Lang.login
+            )}
           </button>
 
           <div className="text-center mb-4">
-            <a href="/forgot-password" className="text-blue-400 hover:underline text-sm">
+            <a
+              href="/forgot-password"
+              className="text-blue-400 hover:underline text-sm"
+            >
               {Lang.forgot_password}?
             </a>
           </div>
 
           <div className="flex justify-center gap-2 mb-4">
             <a href={`${BASE_API}/auth/facebook`} title="Login with GitHub">
-            <FaFacebook title="Google" className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"  />
+              <FaFacebook
+                title="Google"
+                className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"
+              />
             </a>
             <a href={`${BASE_API}/auth/steam`} title="Login with GitHub">
-            <FaSteam title="Steam" className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"  />
+              <FaSteam
+                title="Steam"
+                className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"
+              />
             </a>
             <a href={`${BASE_API}/auth/google`} title="Login with GitHub">
-            <FaGoogle title="Google" className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"  />
+              <FaGoogle
+                title="Google"
+                className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"
+              />
             </a>
             <a href={`${BASE_API}/auth/github`} title="Login with GitHub">
               <FaGithub className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition" />

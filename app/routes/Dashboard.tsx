@@ -24,7 +24,7 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <span className="flex items-center  justify-center py-3">
+    <span className="flex items-center  justify-center py-3 min-h-screen">
       <Toaster position="top-right" reverseOrder={false} />
       welcome to user dashboard
     </span>

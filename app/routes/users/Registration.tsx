@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { Toaster } from "react-hot-toast";
-import { FaSpinner } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaGithub,
+  FaGoogle,
+  FaSpinner,
+  FaSteam,
+} from "react-icons/fa";
 import type { Route } from "../+types/Home";
 import Lang from "../../lang/lang";
 import { Helper } from "../../utils/helper";
@@ -75,14 +81,19 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
-      <div className="bg-gray-800 rounded-lg shadow-xl p-8 w-full max-w-md">
+    <div className="bg-[#000f26] flex items-center justify-center p-6">
+      <div className="bg-gray-800 rounded-lg shadow-xl p-10 w-full max-w-4xl">
+        {/* Increase max-w-3xl to max-w-4xl and padding */}
         <div className="text-center mb-6">
-          <img src="/logo.png" alt="Logo" className="mx-auto h-16 w-20" />
-          <h5 className="text-lg font-bold text-white mt-2">{Lang.login}</h5>
+          <img
+            src="/images/logos/starcade-logo.png"
+            alt="Logo"
+            className="mx-auto h-9 w-auto"
+          />
+          <h5 className="text-lg font-bold text-white mt-6">{Lang.login}</h5>
           {error && (
-          <p className="text-red-500 text-sm text-center mt-2">{error}</p>
-        )}
+            <p className="text-red-500 text-sm text-center mt-2">{error}</p>
+          )}
         </div>
         <Toaster position="top-right" reverseOrder={false} />
         <form>
@@ -138,7 +149,7 @@ export default function Register() {
           <button
             type="button"
             onClick={handleSubmit}
-            className="w-full py-3 text-sm bg-gray-600 hover:bg-gray-500 text-white font-semibold rounded cursor-pointer mb-3 flex items-center justify-center"
+            className="w-full py-3 text-sm bg-[#113861] hover:bg-[#3b4e64] text-white font-semibold rounded cursor-pointer mb-3 flex items-center justify-center"
             disabled={loading}
           >
             {loading ? (
@@ -147,8 +158,30 @@ export default function Register() {
               Lang.sign_up_image
             )}
           </button>
-          
         </form>
+        <div className="flex justify-center gap-2 mb-4">
+          <a href={`${BASE_API}/auth/facebook`} title="Login with GitHub">
+            <FaFacebook
+              title="Google"
+              className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"
+            />
+          </a>
+          <a href={`${BASE_API}/auth/steam`} title="Login with GitHub">
+            <FaSteam
+              title="Steam"
+              className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"
+            />
+          </a>
+          <a href={`${BASE_API}/auth/google`} title="Login with GitHub">
+            <FaGoogle
+              title="Google"
+              className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition"
+            />
+          </a>
+          <a href={`${BASE_API}/auth/github`} title="Login with GitHub">
+            <FaGithub className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition" />
+          </a>
+        </div>
         {/* Already have an account? */}
         <div className="text-center mt-4">
           <p className="text-gray-500 text-sm">
