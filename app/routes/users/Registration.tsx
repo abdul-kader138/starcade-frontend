@@ -182,6 +182,7 @@ export default function Register() {
             <FaGithub className="text-gray-300 text-xl m-1 cursor-pointer hover:scale-110 transition" />
           </a>
         </div>
+
         {/* Already have an account? */}
         <div className="text-center mt-4">
           <p className="text-gray-500 text-sm">
