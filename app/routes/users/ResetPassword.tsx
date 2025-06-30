@@ -81,7 +81,7 @@ export default function ResetPassword() {
         <input
           type="password"
           placeholder={Lang.new_password}
-          className="w-full p-3 rounded bg-gray-700 text-sm mb-4 focus:border-blue-500 text-white border border-gray-600 outline-none"
+          className="w-full p-3 rounded-full bg-gray-700 text-sm mb-4 focus:border-blue-500 text-white border border-gray-600 outline-none"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -89,7 +89,7 @@ export default function ResetPassword() {
         <input
           type="password"
           placeholder={Lang.confirm_password}
-          className="w-full p-3 rounded bg-gray-700 text-sm mb-4 focus:border-blue-500 text-white border border-gray-600 outline-none"
+          className="w-full p-3 rounded-full bg-gray-700 text-sm mb-4 focus:border-blue-500 text-white border border-gray-600 outline-none"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           required
@@ -98,7 +98,7 @@ export default function ResetPassword() {
           type="button"
           disabled={loading}
           onClick={handleResetPassword}
-          className="w-full py-3 text-sm bg-[#113861] hover:bg-[#3b4e64] text-white font-semibold rounded cursor-pointer mb-3 flex items-center justify-center"
+          className="w-full py-3 text-sm bg-[#113861] hover:bg-[#3b4e64] text-white font-semibold rounded-full cursor-pointer mb-3 flex items-center justify-center"
         >
           {loading ? (
             <FaSpinner className="animate-spin text-xl" />

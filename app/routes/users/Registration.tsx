@@ -81,8 +81,8 @@ export default function Register() {
   };
 
   return (
-    <div className="bg-[#000f26] flex items-center justify-center p-6">
-      <div className="bg-gray-800 rounded-lg shadow-xl p-10 w-full max-w-4xl">
+    <div className="bg-[#000f26] flex items-center justify-center p-4">
+      <div className="bg-gray-800 rounded-lg shadow-xl p-8 w-full max-w-3xl">
         {/* Increase max-w-3xl to max-w-4xl and padding */}
         <div className="text-center mb-6">
           <img
@@ -104,7 +104,7 @@ export default function Register() {
               placeholder={Lang.first_name}
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="w-full p-3 bg-gray-700 text-white text-sm rounded-lg outline-none border border-gray-600 focus:border-blue-500"
+              className="w-full p-3 bg-gray-700 text-white text-sm rounded-full outline-none border border-gray-600 focus:border-blue-500"
               required
             />
           </div>
@@ -116,7 +116,7 @@ export default function Register() {
               placeholder={Lang.last_name}
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className="w-full p-3 bg-gray-700 text-white text-sm rounded-lg outline-none border border-gray-600 focus:border-blue-500"
+              className="w-full p-3 bg-gray-700 text-white text-sm rounded-full outline-none border border-gray-600 focus:border-blue-500"
               required
             />
           </div>
@@ -128,7 +128,7 @@ export default function Register() {
               placeholder={Lang.email}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-3 bg-gray-700 text-white text-sm rounded-lg outline-none border border-gray-600 focus:border-blue-500"
+              className="w-full p-3 bg-gray-700 text-white text-sm rounded-full outline-none border border-gray-600 focus:border-blue-500"
               required
             />
           </div>
@@ -140,7 +140,7 @@ export default function Register() {
               placeholder={Lang.password}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-3 bg-gray-700 text-white text-sm rounded-lg outline-none border border-gray-600 focus:border-blue-500"
+              className="w-full p-3 bg-gray-700 text-white text-sm rounded-full outline-none border border-gray-600 focus:border-blue-500"
               required
             />
           </div>
@@ -149,7 +149,7 @@ export default function Register() {
           <button
             type="button"
             onClick={handleSubmit}
-            className="w-full py-3 text-sm bg-[#113861] hover:bg-[#3b4e64] text-white font-semibold rounded cursor-pointer mb-3 flex items-center justify-center"
+            className="w-full py-3 text-sm bg-[#113861] hover:bg-[#3b4e64] text-white font-semibold rounded-full cursor-pointer mb-3 flex items-center justify-center"
             disabled={loading}
           >
             {loading ? (

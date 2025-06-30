@@ -86,7 +86,7 @@ export default function Login() {
             placeholder={Lang.email_address}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full mb-3 p-3 bg-gray-700 rounded text-sm focus:border-blue-500 text-white border border-gray-600 outline-none"
+            className="w-full mb-3 p-3 bg-gray-700 rounded-full text-sm focus:border-blue-500 text-white border border-gray-600 outline-none"
           />
 
           <input
@@ -94,13 +94,13 @@ export default function Login() {
             placeholder={Lang.password}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full mb-3 p-3 bg-gray-700 rounded text-sm focus:border-blue-500 text-white border border-gray-600 outline-none"
+            className="w-full mb-3 p-3 bg-gray-700 rounded-full text-sm focus:border-blue-500 text-white border border-gray-600 outline-none"
           />
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 text-sm bg-[#113861] hover:bg-[#3b4e64] text-white font-semibold rounded cursor-pointer mb-3 flex items-center justify-center"
+            className="w-full py-3 text-sm bg-[#113861] hover:bg-[#3b4e64] text-white font-semibold rounded-full cursor-pointer mb-3 flex items-center justify-center"
           >
             {loading ? (
               <FaSpinner className="animate-spin text-xl" />

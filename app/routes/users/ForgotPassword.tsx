@@ -74,7 +74,7 @@ export default function ForgotPassword() {
         <input
           type="email"
           placeholder={Lang.enter_email}
-          className="w-full mb-3 p-3 bg-gray-700 rounded text-sm focus:border-blue-500 text-white border border-gray-600 outline-none"
+          className="w-full mb-3 p-3 bg-gray-700 rounded-full text-sm focus:border-blue-500 text-white border border-gray-600 outline-none"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -82,7 +82,7 @@ export default function ForgotPassword() {
         <button
           type="button"
           onClick={handleForgotPassword}
-          className="w-full py-3 text-sm bg-[#113861] hover:bg-[#3b4e64] text-white font-semibold rounded cursor-pointer mb-3 flex items-center justify-center"
+          className="w-full py-3 text-sm bg-[#113861] hover:bg-[#3b4e64] text-white font-semibold rounded-full cursor-pointer mb-3 flex items-center justify-center"
           disabled={loading}
         >
           {loading ? (
